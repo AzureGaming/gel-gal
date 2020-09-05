@@ -456,5 +456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1552289453}
-  moveSpeed: 4000
+  baseMoveSpeed: 6000
+  sprintSpeed: 8000
   jumpSpeed: 1000
