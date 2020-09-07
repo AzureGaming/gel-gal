@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 1552289454}
   - component: {fileID: 1552289453}
   - component: {fileID: 1552289455}
+  - component: {fileID: 1552289456}
   m_Layer: 0
   m_Name: Gel Gal
   m_TagString: Untagged
@@ -459,3 +460,23 @@ MonoBehaviour:
   baseMoveSpeed: 6000
   sprintSpeed: 8000
   jumpSpeed: 1000
+--- !u!114 &1552289456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552289450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50beaa67582677244ad2aeef7c217dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1552289450}
+  gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+    type: 3}
+  pointPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
+    type: 3}
+  points: []
+  numberOfPoints: 20
+  launchForce: 9

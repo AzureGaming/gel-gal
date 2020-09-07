@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public Rigidbody2D rb;
+    public delegate void AimGel();
+    public static event AimGel OnAimGel;
 
     [SerializeField] float baseMoveSpeed = 6000f;
     [SerializeField] float sprintSpeed = 8000f;
@@ -19,6 +21,10 @@ public class Player : MonoBehaviour {
         xMove = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             jumping = true;
+        }
+
+        if (Input.GetMouseButtonDown(0)) {
+            OnAimGel?.Invoke();
         }
 
         if (Input.GetKey(KeyCode.LeftShift)) {
