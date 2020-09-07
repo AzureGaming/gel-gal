@@ -160,6 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50beaa67582677244ad2aeef7c217dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
     type: 3}
-  launchForce: 9
+  pointPrefab: {fileID: 0}
+  points: []
+  numberOfPoints: 0
+  launchForce: 2000

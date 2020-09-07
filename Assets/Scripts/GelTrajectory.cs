@@ -8,10 +8,17 @@ public class GelTrajectory : MonoBehaviour {
     public GameObject pointPrefab;
     public GameObject[] points;
     public int numberOfPoints;
+
+    [SerializeField] float launchFactor = 2f;
+    [SerializeField] float launchForce = 9f;
+
+    Rigidbody2D rb;
+
     Vector2 direction;
 
-
-    [SerializeField] float launchForce = 9f;
+    private void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Start() {
         points = new GameObject[numberOfPoints];
@@ -25,6 +32,8 @@ public class GelTrajectory : MonoBehaviour {
         Vector2 playerPos = player.transform.position;
         direction = mousePos - playerPos;
         player.transform.right = direction;
+
+        launchForce = direction.magnitude * launchFactor;
 
         for (int i = 0; i < points.Length; i++) {
             points[i].transform.position = PointPosition(i * 0.1f);
@@ -48,5 +57,4 @@ public class GelTrajectory : MonoBehaviour {
         Vector2 currentPosition = (Vector2)transform.position + (direction.normalized * launchForce * time) + 0.5f * Physics2D.gravity * (time * time);
         return currentPosition;
     }
-
 }
