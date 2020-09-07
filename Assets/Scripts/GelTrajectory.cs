@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GelTrajectory : MonoBehaviour {
-    public GameObject player;
     public GameObject gelPrefab;
     public GameObject pointPrefab;
     public GameObject[] points;
@@ -29,9 +28,10 @@ public class GelTrajectory : MonoBehaviour {
 
     private void Update() {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = player.transform.position;
+        Vector2 playerPos = transform.position;
         direction = mousePos - playerPos;
-        player.transform.right = direction;
+        transform.right = direction;
+
 
         launchForce = direction.magnitude * launchFactor;
 
@@ -41,16 +41,18 @@ public class GelTrajectory : MonoBehaviour {
     }
 
     private void OnEnable() {
-        Player.OnAimGel += Shoot;
+        Player.OnShoot += Shoot;
     }
 
     private void OnDisable() {
-        Player.OnAimGel -= Shoot;
+        Player.OnShoot -= Shoot;
     }
 
     void Shoot() {
         GameObject arrowRef = Instantiate(gelPrefab, transform.position, transform.rotation);
-        arrowRef.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+        Vector3 velocity = transform.right * launchForce;
+
+        arrowRef.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 
     Vector2 PointPosition(float time) {

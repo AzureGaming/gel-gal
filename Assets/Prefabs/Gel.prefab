@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1554598145726837384}
   - component: {fileID: 3750757505731579414}
   - component: {fileID: 6744306983634771090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gel
   m_TagString: Gel
   m_Icon: {fileID: 0}

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public Rigidbody2D rb;
-    public delegate void AimGel();
-    public static event AimGel OnAimGel;
+    public delegate void Shoot();
+    public static event Shoot OnShoot;
 
     [SerializeField] float baseMoveSpeed = 6000f;
     [SerializeField] float sprintSpeed = 8000f;
     [SerializeField] float jumpSpeed = 1000f;
+
+    SpriteRenderer spriteRenderer;
 
     float moveSpeed;
     float xMove;
@@ -17,14 +19,19 @@ public class Player : MonoBehaviour {
     bool sprinting = false;
     bool jumping;
 
+    private void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void Update() {
         xMove = Input.GetAxis("Horizontal");
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             jumping = true;
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            OnAimGel?.Invoke();
+            OnShoot?.Invoke();
         }
 
         if (Input.GetKey(KeyCode.LeftShift)) {
@@ -32,6 +39,8 @@ public class Player : MonoBehaviour {
         } else {
             sprinting = false;
         }
+
+        FaceMouse();
     }
 
     private void FixedUpdate() {
@@ -54,6 +63,18 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.tag == "Floor") {
             grounded = true;
+        }
+    }
+
+    void FaceMouse() {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+        Vector2 direction = mousePos - playerPos;
+
+        if (direction.x > 0) {
+            spriteRenderer.flipX = false;
+        } else {
+            spriteRenderer.flipX = true;
         }
     }
 }
