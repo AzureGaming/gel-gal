@@ -450,6 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579a8bb7b939095428dcc689a782f0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceAreaPrefab: {fileID: 4091755490470571412, guid: 83db47fb40d8d1946b12a08164e43f84,
+    type: 3}
 --- !u!1001 &1031947403
 PrefabInstance:
   m_ObjectHideFlags: 0
