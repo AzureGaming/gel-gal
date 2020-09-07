@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1554598145726837391}
   - component: {fileID: 1554598145726837384}
   - component: {fileID: 3750757505731579414}
+  - component: {fileID: 6744306983634771090}
   m_Layer: 0
   m_Name: Gel
   m_TagString: Gel
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &6744306983634771090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554598145726837385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348fe37969ca7c847849b01789e48262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionParticlesPrefab: {fileID: 8712534377297658485, guid: 180a1d6e134c4054a905b1df8746f500,
+    type: 3}
