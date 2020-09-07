@@ -135,3 +135,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionParticlesPrefab: {fileID: 8712534377297658485, guid: 180a1d6e134c4054a905b1df8746f500,
     type: 3}
+  bounceAreaPrefab: {fileID: 4091755490470571412, guid: 83db47fb40d8d1946b12a08164e43f84,
+    type: 3}
