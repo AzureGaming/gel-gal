@@ -86,6 +86,141 @@ TextureImporter:
   - first:
       213: -3134430637769732617
     second: Gel Gal Tilesheet_27
+  - first:
+      213: 1260191962393353745
+    second: Gel Gal Tilesheet_0
+  - first:
+      213: -1371633175495345763
+    second: Gel Gal Tilesheet_1
+  - first:
+      213: -6536941527204931528
+    second: Gel Gal Tilesheet_2
+  - first:
+      213: 92810888220172190
+    second: Gel Gal Tilesheet_3
+  - first:
+      213: 4139295007613550673
+    second: Gel Gal Tilesheet_4
+  - first:
+      213: 2074518968938215114
+    second: Gel Gal Tilesheet_5
+  - first:
+      213: 2948032113599769101
+    second: Gel Gal Tilesheet_6
+  - first:
+      213: 978375973190229061
+    second: Gel Gal Tilesheet_7
+  - first:
+      213: -405078681776441420
+    second: Gel Gal Tilesheet_8
+  - first:
+      213: -4839605850646589480
+    second: Gel Gal Tilesheet_9
+  - first:
+      213: 9134268392336049502
+    second: Gel Gal Tilesheet_10
+  - first:
+      213: 3473913600217073079
+    second: Gel Gal Tilesheet_11
+  - first:
+      213: -1487075944715630542
+    second: Gel Gal Tilesheet_12
+  - first:
+      213: -5417954346155507568
+    second: Gel Gal Tilesheet_28
+  - first:
+      213: 8011187756010842915
+    second: Gel Gal Tilesheet_29
+  - first:
+      213: 395427785361437090
+    second: Gel Gal Tilesheet_30
+  - first:
+      213: -6109944048077702106
+    second: Gel Gal Tilesheet_31
+  - first:
+      213: -4244866528833786540
+    second: Gel Gal Tilesheet_32
+  - first:
+      213: -2197553099097690486
+    second: Gel Gal Tilesheet_33
+  - first:
+      213: -3433739569940255248
+    second: Gel Gal Tilesheet_34
+  - first:
+      213: -4247191851926863092
+    second: Gel Gal Tilesheet_35
+  - first:
+      213: 7809751598867990743
+    second: Gel Gal Tilesheet_36
+  - first:
+      213: -5561256367986410231
+    second: Gel Gal Tilesheet_37
+  - first:
+      213: 7290769323613496931
+    second: Gel Gal Tilesheet_38
+  - first:
+      213: -8346868766563913609
+    second: Gel Gal Tilesheet_39
+  - first:
+      213: 4629433117067698396
+    second: Gel Gal Tilesheet_40
+  - first:
+      213: 5095056798211101664
+    second: Gel Gal Tilesheet_41
+  - first:
+      213: 6058580429038550136
+    second: Gel Gal Tilesheet_42
+  - first:
+      213: -8217635190045623042
+    second: Gel Gal Tilesheet_43
+  - first:
+      213: -1636900105081968890
+    second: Gel Gal Tilesheet_44
+  - first:
+      213: 6033324208671102736
+    second: Gel Gal Tilesheet_45
+  - first:
+      213: -2432811058298135136
+    second: Gel Gal Tilesheet_46
+  - first:
+      213: -3700857060908518862
+    second: Gel Gal Tilesheet_47
+  - first:
+      213: 3634442209104495517
+    second: Gel Gal Tilesheet_48
+  - first:
+      213: 2869338768277441777
+    second: Gel Gal Tilesheet_49
+  - first:
+      213: 5217930392618740608
+    second: Gel Gal Tilesheet_50
+  - first:
+      213: 3019925447290666196
+    second: Gel Gal Tilesheet_51
+  - first:
+      213: -7256091401930868398
+    second: Gel Gal Tilesheet_52
+  - first:
+      213: -2979594127965920375
+    second: Gel Gal Tilesheet_53
+  - first:
+      213: 1031442069026823443
+    second: Gel Gal Tilesheet_54
+  - first:
+      213: -1247273798179179975
+    second: Gel Gal Tilesheet_55
+  - first:
+      213: -682924802187735300
+    second: Gel Gal Tilesheet_56
+  - first:
+      213: 40148674001224944
+    second: Gel Gal Tilesheet_57
+  - first:
+      213: -1062264443033785781
+    second: Gel Gal Tilesheet_58
+  - first:
+      213: 8066026709753339237
+    second: Gel Gal Tilesheet_59
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -185,8 +320,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
+        x: 16
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -196,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5028f0357bf57520800000000000000
-      internalID: 2699340032429793374
+      spriteID: 11e124bb9e91d7110800000000000000
+      internalID: 1260191962393353745
       vertices: []
       indices: 
       edges: []
@@ -206,8 +341,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 112
+        x: 32
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -217,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7ca3a363fdbd6db0800000000000000
-      internalID: -4796969175033336710
+      spriteID: d997574e4eaf6fce0800000000000000
+      internalID: -1371633175495345763
       vertices: []
       indices: 
       edges: []
@@ -227,8 +362,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
+        x: 48
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -238,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 731cb0f2e5ce77e60800000000000000
-      internalID: 7960090755661021495
+      spriteID: 8385371b05e1845a0800000000000000
+      internalID: -6536941527204931528
       vertices: []
       indices: 
       edges: []
@@ -248,8 +383,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 112
+        x: 80
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -259,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026cc26f3135530d0800000000000000
-      internalID: -3443754994855262688
+      spriteID: e9fd6a7d20bb94100800000000000000
+      internalID: 92810888220172190
       vertices: []
       indices: 
       edges: []
@@ -269,7 +404,133 @@ TextureImporter:
       name: Gel Gal Tilesheet_4
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1508a55e0eab17930800000000000000
+      internalID: 4139295007613550673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac63f5fc20c2acc10800000000000000
+      internalID: 2074518968938215114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0aee85869389e820800000000000000
+      internalID: 2948032113599769101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cd7c293c3e39d00800000000000000
+      internalID: 978375973190229061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7b1aac51fd06af0800000000000000
+      internalID: -405078681776441420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfce43ce1446dcb0800000000000000
+      internalID: -4839605850646589480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_10
+      rect:
+        serializedVersion: 2
+        x: 16
         y: 112
         width: 16
         height: 16
@@ -280,134 +541,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 028ba16848643aca0800000000000000
-      internalID: -6006879942982584288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef554e38d78b99ac0800000000000000
-      internalID: -3847841557388175874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7968cff9ee2bc3a90800000000000000
-      internalID: -7332789355309922665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_7
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16338e740680f86a0800000000000000
-      internalID: -6444923332127607967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_8
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b43461291b8798de0800000000000000
-      internalID: -1330399510855793845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_9
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1119d4c94b87be690800000000000000
-      internalID: -7571825631381581551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gel Gal Tilesheet_10
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9de8f018c428ccc40800000000000000
-      internalID: 5533941307225902809
+      spriteID: e55c44815b073ce70800000000000000
+      internalID: 9134268392336049502
       vertices: []
       indices: 
       edges: []
@@ -416,8 +551,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -427,8 +562,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86006d7795210e600800000000000000
-      internalID: 495416134482657384
+      spriteID: 7b546598302d53030800000000000000
+      internalID: 3473913600217073079
       vertices: []
       indices: 
       edges: []
@@ -437,8 +572,8 @@ TextureImporter:
       name: Gel Gal Tilesheet_12
       rect:
         serializedVersion: 2
-        x: 80
-        y: 80
+        x: 48
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -448,8 +583,407 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2d6b3a69cf607a00800000000000000
-      internalID: 752224048632261930
+      spriteID: 2384231ae48dc5be0800000000000000
+      internalID: -1487075944715630542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedcdf52621513080800000000000000
+      internalID: -9209490538707956246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27a2501ee0d48460800000000000000
+      internalID: 7243143821613246251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8eb377d1660b76b0800000000000000
+      internalID: -5297633519374975346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922beb5f859e19210800000000000000
+      internalID: 1338107132595057193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626ef7a048a712c40800000000000000
+      internalID: 5485800528644400678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f0749febbf16500800000000000000
+      internalID: 387867840575115087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e96e94e8e90d8b0800000000000000
+      internalID: -5129425641612599782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ee47d61f6b5c9b0800000000000000
+      internalID: -5060437458241130931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a233cbcdc5aea0230800000000000000
+      internalID: 3605952136224715562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e35596ced3f349a0800000000000000
+      internalID: -6249883719720152092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee31b090206654f40800000000000000
+      internalID: 5712083861317030894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b4b7638ef45a680800000000000000
+      internalID: -8744495242704893041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40dde0f6b3fb48ac0800000000000000
+      internalID: -3853745119135081212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ad6f45135169980800000000000000
+      internalID: -8532609142383781334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_27
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd42ae11f34084d0800000000000000
+      internalID: -3134430637769732617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0900e1c4a3f8fc4b0800000000000000
+      internalID: -5417954346155507568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b2cf9a1d47d2f60800000000000000
+      internalID: 8011187756010842915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1b9c8c977dc7500800000000000000
+      internalID: 395427785361437090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal Tilesheet_31
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cf0d8924e153ba0800000000000000
+      internalID: -6109944048077702106
       vertices: []
       indices: 
       edges: []

@@ -15,12 +15,14 @@ public class Player : MonoBehaviour {
 
     float moveSpeed;
     float xMove;
+    float startGravityScale;
     bool grounded = true;
     bool sprinting = false;
     bool jumping;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startGravityScale = rb.gravityScale;
     }
 
     private void Update() {
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.tag == "Floor") {
             grounded = true;
+            rb.gravityScale = startGravityScale;
         }
     }
 
