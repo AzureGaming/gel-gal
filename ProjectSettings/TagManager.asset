@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Gel
+  - Button Collider
+  - Button Trigger
   layers:
   - Default
   - TransparentFX
