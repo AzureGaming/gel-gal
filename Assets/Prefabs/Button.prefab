@@ -100,6 +100,7 @@ MonoBehaviour:
     type: 3}
   downSprite: {fileID: -8744495242704893041, guid: 86f18de4e4da9e043b58015ba55783f6,
     type: 3}
+  spriteR: {fileID: 2794198612083067930}
 --- !u!50 &2794198612083067909
 Rigidbody2D:
   serializedVersion: 4

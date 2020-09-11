@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b4087edce89fb458ae36fea487a3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 2037489199}
 --- !u!50 &12796340
 Rigidbody2D:
   serializedVersion: 4
@@ -896,6 +897,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8737737, y: 0.28986537}
   m_EdgeRadius: 0
+--- !u!114 &2037489199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2794198612083067931, guid: 6dd57456c49fd444d8e4343348c74c3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2794198611131912757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037489196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bad26bb733c514795c67f9a9f4ba28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2037489201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2794198612083067928, guid: 6dd57456c49fd444d8e4343348c74c3d,
