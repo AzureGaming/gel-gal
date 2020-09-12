@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public Rigidbody2D rb;
     public delegate void Shoot();
     public static event Shoot OnShoot;
+
+    public GameObject cratePrefab;
 
     [SerializeField] float baseMoveSpeed = 6000f;
     [SerializeField] float sprintSpeed = 8000f;
     [SerializeField] float jumpSpeed = 1000f;
 
     SpriteRenderer spriteRenderer;
+    Rigidbody2D rb;
 
     float moveSpeed;
     float xMove;
@@ -19,10 +21,22 @@ public class Player : MonoBehaviour {
     bool grounded = true;
     bool sprinting = false;
     bool jumping;
+    bool canPickUp = false;
+    bool hasCrate = false;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+
         startGravityScale = rb.gravityScale;
+    }
+
+    private void OnEnable() {
+        CratePickUp.OnPickUp += PickUpCrate;
+    }
+
+    private void OnDisable() {
+        CratePickUp.OnPickUp -= PickUpCrate;
     }
 
     private void Update() {
@@ -40,6 +54,14 @@ public class Player : MonoBehaviour {
             sprinting = true;
         } else {
             sprinting = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F)) {
+            Debug.Log(hasCrate);
+            if (hasCrate) {
+                Instantiate(cratePrefab, transform.position, Quaternion.identity);
+                hasCrate = false;
+            }
         }
 
         FaceMouse();
@@ -63,10 +85,14 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.tag == "Floor") {
+        if (collision.collider.CompareTag(GameManager.FLOOR_TAG)) {
             grounded = true;
             rb.gravityScale = startGravityScale;
         }
+    }
+
+    public void CanPickup(bool value) {
+        canPickUp = value;
     }
 
     void FaceMouse() {
@@ -79,5 +105,14 @@ public class Player : MonoBehaviour {
         } else {
             spriteRenderer.flipX = true;
         }
+    }
+
+    void PickUpCrate() {
+        StartCoroutine(CratePickUpCooldown());
+    }
+
+    IEnumerator CratePickUpCooldown() {
+        yield return new WaitForSeconds(0.5f);
+        hasCrate = true;
     }
 }

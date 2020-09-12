@@ -67,6 +67,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -152,6 +153,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -246,7 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9f95a23686d3549baabe6e8e07e255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3848794814367596523}
+  cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
+    type: 3}
   baseMoveSpeed: 6000
   sprintSpeed: 8000
   jumpSpeed: 1000

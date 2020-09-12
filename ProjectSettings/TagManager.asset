@@ -8,6 +8,7 @@ TagManager:
   - Gel
   - Button Collider
   - Button Trigger
+  - Crate
   layers:
   - Default
   - TransparentFX
