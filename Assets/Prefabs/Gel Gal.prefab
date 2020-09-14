@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7601148881796097316}
   - component: {fileID: 1448377006509844778}
+  - component: {fileID: 3599865810189604430}
   m_Layer: 8
   m_Name: Projectile Origin
   m_TagString: Untagged
@@ -82,6 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3599865810189604430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810545272462518535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306b95f6ae8d22042a7d6d54f7cd2fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3490098058664709280
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+    type: 3}
+  cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
     type: 3}
   projectileOrigin: {fileID: 2810545272462518535}
   launchForce: 9

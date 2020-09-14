@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public delegate void Shoot(Vector2 direction);
+    public delegate void Shoot(Vector2 direction, bool hasCrate);
     public static event Shoot OnShoot;
     public delegate void Aim(Vector2? direction);
     public static event Aim OnAim;
@@ -56,7 +56,8 @@ public class Player : MonoBehaviour {
         if (Input.GetMouseButton(1)) {
             OnAim?.Invoke(direction);
             if (Input.GetMouseButtonDown(0)) {
-                OnShoot?.Invoke(direction);
+                OnShoot?.Invoke(direction, hasCrate);
+                hasCrate = false;
             }
         } else {
             OnAim?.Invoke(null);
@@ -69,7 +70,6 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.F)) {
-            Debug.Log(hasCrate);
             if (hasCrate) {
                 Instantiate(cratePrefab, transform.position, Quaternion.identity);
                 hasCrate = false;

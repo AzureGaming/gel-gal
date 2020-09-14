@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
     public GameObject gelPrefab;
+    public GameObject cratePrefab;
     public GameObject projectileOrigin;
 
     [SerializeField] float launchForce = 2f;
@@ -16,10 +17,18 @@ public class Shoot : MonoBehaviour {
         Player.OnShoot -= SpawnProjectile;
     }
 
-    void SpawnProjectile(Vector2 direction) {
-        GameObject arrowRef = Instantiate(gelPrefab, transform.position, transform.rotation);
-        Vector3 velocity = projectileOrigin.transform.right * (direction.magnitude * 2f);
-          
-        arrowRef.GetComponent<Rigidbody2D>().velocity = velocity;
+    void SpawnProjectile(Vector2 direction, bool hasCrate) {
+        if (hasCrate) {
+            GameObject crateRef = Instantiate(cratePrefab, transform.position, transform.rotation);
+            Vector3 velocity = projectileOrigin.transform.right * (direction.magnitude * 2f);
+
+            crateRef.GetComponent<Rigidbody2D>().velocity = velocity;
+
+        } else {
+            GameObject arrowRef = Instantiate(gelPrefab, transform.position, transform.rotation);
+            Vector3 velocity = projectileOrigin.transform.right * (direction.magnitude * 2f);
+
+            arrowRef.GetComponent<Rigidbody2D>().velocity = velocity;
+        }
     }
 }
