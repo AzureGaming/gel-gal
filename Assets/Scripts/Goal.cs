@@ -6,6 +6,12 @@ public class Goal : MonoBehaviour {
     public Animator top;
     public Animator bottom;
 
+    BoxCollider2D collider2d;
+
+    private void Awake() {
+        collider2d = GetComponent<BoxCollider2D>();    
+    }
+
     private void OnEnable() {
         RoomManager.OnRoomCleared += HandleRoomClear;
     }
@@ -21,10 +27,22 @@ public class Goal : MonoBehaviour {
     void Open() {
         top.SetTrigger("Open");
         bottom.SetTrigger("Open");
+        StartCoroutine(DisableCollider());
     }
 
     void Close() {
         top.SetTrigger("Close");
         bottom.SetTrigger("Close");
+        StartCoroutine(EnableCollider());
+    }
+
+    IEnumerator DisableCollider() {
+        yield return new WaitForSeconds(0.5f);
+        collider2d.enabled = false;
+    }
+
+    IEnumerator EnableCollider() {
+        yield return new WaitForSeconds(0.5f);
+        collider2d.enabled = true;
     }
 }
