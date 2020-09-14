@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public static event Aim OnAim;
 
     public GameObject cratePrefab;
+    public GameObject crateDropContainer;
 
     [SerializeField] float baseMoveSpeed = 6000f;
     [SerializeField] float sprintSpeed = 8000f;
@@ -26,12 +27,17 @@ public class Player : MonoBehaviour {
     bool canPickUp = false;
     bool hasCrate = false;
     Vector2 direction;
+    Vector3 startScale;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
+    }
+
+    private void Start() {
         startGravityScale = rb.gravityScale;
+        startScale = transform.localScale;
     }
 
     private void OnEnable() {
@@ -71,7 +77,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.F)) {
             if (hasCrate) {
-                Instantiate(cratePrefab, transform.position, Quaternion.identity);
+                Instantiate(cratePrefab, crateDropContainer.transform.position, Quaternion.identity);
                 hasCrate = false;
             }
         }
@@ -113,9 +119,13 @@ public class Player : MonoBehaviour {
         Vector2 direction = mousePos - playerPos;
 
         if (direction.x > 0) {
-            spriteRenderer.flipX = false;
+            //spriteRenderer.flipX = false;
+            transform.localScale = startScale;
         } else {
-            spriteRenderer.flipX = true;
+            //spriteRenderer.flipX = true;
+            Vector3 newScale = startScale;
+            newScale.x = -1;
+            transform.localScale = newScale;
         }
     }
 
