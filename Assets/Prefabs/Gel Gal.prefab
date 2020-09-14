@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7601148881796097316}
-  - component: {fileID: 1236183855952282498}
   - component: {fileID: 1448377006509844778}
   m_Layer: 8
   m_Name: Projectile Origin
@@ -32,26 +31,6 @@ Transform:
   m_Father: {fileID: 3848794814367596522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236183855952282498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2810545272462518535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50beaa67582677244ad2aeef7c217dd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
-    type: 3}
-  pointPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
-    type: 3}
-  points: []
-  numberOfPoints: 20
-  launchFactor: 2
-  launchForce: 9
 --- !u!212 &1448377006509844778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -103,6 +82,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3490098058664709280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6180615322789811936}
+  m_Layer: 8
+  m_Name: Projectile Trajectory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6180615322789811936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490098058664709280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3848794814367596522}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3848794814367596524
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +125,7 @@ GameObject:
   - component: {fileID: 3848794814367596520}
   - component: {fileID: 3848794814367596523}
   - component: {fileID: 3848794814367596521}
+  - component: {fileID: 2340734458560861122}
   m_Layer: 8
   m_Name: Gel Gal
   m_TagString: Player
@@ -135,6 +145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7601148881796097316}
+  - {fileID: 6180615322789811936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,3 +264,19 @@ MonoBehaviour:
   baseMoveSpeed: 6000
   sprintSpeed: 8000
   jumpSpeed: 1000
+--- !u!114 &2340734458560861122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0447a4209b736a04a9fa9b49a6f1b533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+    type: 3}
+  projectileOrigin: {fileID: 2810545272462518535}
+  launchForce: 9

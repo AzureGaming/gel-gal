@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public delegate void Shoot();
+    public delegate void Shoot(Vector2 direction);
     public static event Shoot OnShoot;
+    public delegate void Aim(Vector2? direction);
+    public static event Aim OnAim;
 
     public GameObject cratePrefab;
 
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour {
     bool jumping;
     bool canPickUp = false;
     bool hasCrate = false;
+    Vector2 direction;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -40,14 +43,23 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = transform.position;
+
         xMove = Input.GetAxis("Horizontal");
+        direction = mousePos - playerPos;
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             jumping = true;
         }
 
-        if (Input.GetMouseButtonDown(0)) {
-            OnShoot?.Invoke();
+        if (Input.GetMouseButton(1)) {
+            OnAim?.Invoke(direction);
+            if (Input.GetMouseButtonDown(0)) {
+                OnShoot?.Invoke(direction);
+            }
+        } else {
+            OnAim?.Invoke(null);
         }
 
         if (Input.GetKey(KeyCode.LeftShift)) {
@@ -64,7 +76,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        FaceMouse();
+        FlipToFaceMouse();
     }
 
     private void FixedUpdate() {
@@ -95,7 +107,7 @@ public class Player : MonoBehaviour {
         canPickUp = value;
     }
 
-    void FaceMouse() {
+    void FlipToFaceMouse() {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 playerPos = transform.position;
         Vector2 direction = mousePos - playerPos;
