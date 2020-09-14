@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class RoomManager : MonoBehaviour {
+    public delegate void RoomCleared(bool valid);
+    public static RoomCleared OnRoomCleared;
+
+    bool roomClear = false;
+
     private void OnEnable() {
         ButtonTrigger.OnButtonActivate += HandleButtonPress;
     }
@@ -14,9 +19,17 @@ public class RoomManager : MonoBehaviour {
 
     void HandleButtonPress(bool activated) {
         if (activated) {
-            Debug.Log("Pressed");
+            RoomClear();
         } else {
-            Debug.Log("Un preesseed");
+            RoomInvalid();
         }
+    }
+
+    void RoomClear() {
+        OnRoomCleared?.Invoke(true);
+    }
+
+    void RoomInvalid() {
+        OnRoomCleared?.Invoke(false);
     }
 }
