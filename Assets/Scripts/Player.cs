@@ -103,7 +103,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag(GameManager.FLOOR_TAG)) {
+        if (collision.collider.CompareTag(GameManager.FLOOR_TAG) || collision.collider.CompareTag(GameManager.BUTTON_TRIGGER) || collision.collider.CompareTag(GameManager.CRATE)) {
             grounded = true;
             rb.gravityScale = startGravityScale;
         }
