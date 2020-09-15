@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 3848794814367596523}
   - component: {fileID: 3848794814367596521}
   - component: {fileID: 2340734458560861122}
+  - component: {fileID: 4976561363699585292}
+  - component: {fileID: 85079456763906077}
   m_Layer: 8
   m_Name: Gel Gal
   m_TagString: Player
@@ -202,7 +204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 705af469eb6181b41a22585837b469c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -227,7 +229,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.059093684, y: 0.06142783}
+  m_Offset: {x: 0.059093684, y: 0.14782333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -238,7 +240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.88364166, y: 2.2521443}
+  m_Size: {x: 0.88364166, y: 2.0793533}
   m_EdgeRadius: 0
 --- !u!50 &3848794814367596523
 Rigidbody2D:
@@ -296,7 +298,42 @@ MonoBehaviour:
   cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
     type: 3}
   projectileOrigin: {fileID: 2810545272462518535}
-  launchForce: 9
+--- !u!58 &4976561363699585292
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06, y: -0.73}
+  serializedVersion: 2
+  m_Radius: 0.34
+--- !u!114 &85079456763906077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50beaa67582677244ad2aeef7c217dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+    type: 3}
+  pointPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
+    type: 3}
+  points: []
+  prefabContainer: {fileID: 3490098058664709280}
+  numberOfPoints: 20
+  launchFactor: 2
 --- !u!1 &8008116500128761097
 GameObject:
   m_ObjectHideFlags: 0

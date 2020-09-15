@@ -166,32 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6a09db4b6305d4eb9e4c5372a9f980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &335986539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3848794814367596524, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-    type: 3}
-  m_PrefabInstance: {fileID: 725572567}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &335986540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335986539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50beaa67582677244ad2aeef7c217dd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
-    type: 3}
-  pointPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
-    type: 3}
-  points: []
-  prefabContainer: {fileID: 931254054}
-  numberOfPoints: 20
-  launchFactor: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,11 +392,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3848794814367596525, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a6f1f6c79a2814c92a5e07b955c875, type: 3}
 --- !u!1001 &853777823
@@ -494,12 +463,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 617065f78fcf4364898b2391f00e9935, type: 3}
---- !u!1 &931254054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3490098058664709280, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-    type: 3}
-  m_PrefabInstance: {fileID: 725572567}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1865896665
 GameObject:
   m_ObjectHideFlags: 0
