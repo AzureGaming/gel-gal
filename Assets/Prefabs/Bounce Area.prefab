@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5502703920671376125}
   - component: {fileID: 2747385316549955853}
   - component: {fileID: 4619215781289626690}
+  - component: {fileID: -8090891259670605590}
   m_Layer: 0
   m_Name: Bounce Area
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4091755490470571412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9, y: -4.35, z: 0}
-  m_LocalScale: {x: 12.105597, y: 2.821956, z: 18.5655}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5407644764632374166}
   m_Father: {fileID: 0}
@@ -75,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 98b88267b41973143ae9efc2b1acec35, type: 3}
+  m_Sprite: {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181,
+    type: 3}
   m_Color: {r: 0, g: 0.57601166, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,14 +105,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.125, y: 0.125}
+    oldSize: {x: 1, y: 0.3125}
     newSize: {x: 0.125, y: 0.125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.125, y: 0.125}
+  m_Size: {x: 0.16, y: 0.05}
   m_EdgeRadius: 0
 --- !u!50 &2747385316549955853
 Rigidbody2D:
@@ -147,6 +149,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceFactor: 4000
   gravityApplied: 1
+--- !u!114 &-8090891259670605590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091755490470571412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3006b91c4b3d3944b06c4bbb020e1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+  - {fileID: -7810869803583587679, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+  - {fileID: 4905072930211349435, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+  - {fileID: -8358653837020511143, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+  - {fileID: -3361141939155306037, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
 --- !u!1 &8580027950047996069
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5407644764632374166
 Transform:
   m_ObjectHideFlags: 0
