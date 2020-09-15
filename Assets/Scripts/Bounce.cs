@@ -11,8 +11,17 @@ public class Bounce : MonoBehaviour {
         if (!rb) {
             return;
         }
-        Vector2 force = new Vector2(0, bounceFactor * Time.deltaTime);
-        rb.gravityScale = gravityApplied;
-        rb.AddForce(force, ForceMode2D.Impulse);
+        //Vector2 force = new Vector2(0, bounceFactor * Time.deltaTime);
+        //rb.gravityScale = gravityApplied;
+        //rb.AddForce(force, ForceMode2D.Impulse);
+
+        // If gel is perpendicular to horizontal
+        //if (transform.rotation)
+            // if collider start position was below
+                // push object up
+            // if collider start position was above
+                // push object down
+        // if gel is on horizontal surface (ground, ceiling)
+            // add opposite force 
     }
 }

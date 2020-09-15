@@ -7,8 +7,6 @@ public class Shoot : MonoBehaviour {
     public GameObject cratePrefab;
     public GameObject projectileOrigin;
 
-    [SerializeField] float launchForce = 2f;
-
     private void OnEnable() {
         Player.OnShoot += SpawnProjectile;
     }

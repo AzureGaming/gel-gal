@@ -9,10 +9,11 @@ public class Gel : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag(GameManager.FLOOR_TAG)) {
             Vector2 collisionPos = new Vector3(collision.GetContact(0).point.x, collision.GetContact(0).point.y);
+            Quaternion newRot = Quaternion.FromToRotation(Vector2.up, collision.contacts[0].normal);
 
             Destroy(gameObject);
             Instantiate(collisionParticlesPrefab, transform.position, Quaternion.identity);
-            Instantiate(bounceAreaPrefab, collisionPos, Quaternion.identity);
+            Instantiate(bounceAreaPrefab, collisionPos, newRot);
         }
     }
 }
