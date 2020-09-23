@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5f0fbb4eb353c6240bab96313af833b8
+guid: a9d093d7159c7ee448ff0f5ddff8aa02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -959921819502506928
-    second: Throwing Indicators_0
-  - first:
-      213: 3238240318549435469
-    second: Throwing Indicators_1
+      213: -6275103891222460754
+    second: Arrow Throwing Indicator_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,28 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Throwing Indicators_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05c0868e03cada2f0800000000000000
-      internalID: -959921819502506928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Throwing Indicators_1
+      name: Arrow Throwing Indicator_0
       rect:
         serializedVersion: 2
         x: 32
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d44ac7ca96a80fc20800000000000000
-      internalID: 3238240318549435469
+      spriteID: ea68303024a5ae8a0800000000000000
+      internalID: -6275103891222460754
       vertices: []
       indices: 
       edges: []

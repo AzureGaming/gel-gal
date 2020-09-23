@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 124043210618395368}
   - component: {fileID: 4328091805058074608}
   m_Layer: 0
-  m_Name: Diamond
+  m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -69,8 +70,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 51a0d434c2654fb4a8412d6d13aabef8, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 5867934956732037977, guid: 8c1545fdefd38c545a1a69f226cd0d45,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -328,11 +328,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gelPrefab: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
     type: 3}
-  pointPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
+  dotPrefab: {fileID: 6183170669982960417, guid: 5781219059cf9234bbb2a26d6d046af4,
+    type: 3}
+  arrowPrefab: {fileID: 6183170669982960417, guid: 302829d8c3ab56e4685b2150b0be926f,
     type: 3}
   points: []
   prefabContainer: {fileID: 3490098058664709280}
-  numberOfPoints: 20
+  numberOfPoints: 19
   launchFactor: 2
 --- !u!1 &8008116500128761097
 GameObject:
