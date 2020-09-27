@@ -28,16 +28,19 @@ public class Player : MonoBehaviour {
     bool hasCrate = false;
     Vector2 direction;
     Vector3 startScale;
+    float startDrag;
+    float startAngularDrag;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     private void Start() {
         startGravityScale = rb.gravityScale;
         startScale = transform.localScale;
+        startDrag = rb.drag;
+        startAngularDrag = rb.angularDrag;
     }
 
     private void OnEnable() {
@@ -99,13 +102,16 @@ public class Player : MonoBehaviour {
             grounded = false;
             jumping = false;
             rb.AddForce(Vector2.up * jumpSpeed * Time.deltaTime, ForceMode2D.Impulse);
+            Debug.Log("Jump velocity" + rb.velocity);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag(GameManager.FLOOR_TAG) || collision.collider.CompareTag(GameManager.BUTTON_TRIGGER) || collision.collider.CompareTag(GameManager.CRATE)) {
             grounded = true;
-            rb.gravityScale = startGravityScale;
+            //rb.gravityScale = startGravityScale;
+            rb.drag = startDrag;
+            rb.angularDrag = startAngularDrag;
         }
     }
 
