@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 8636899987442767889}
   - component: {fileID: 4981216559123716300}
   - component: {fileID: 3990805160227531851}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Floor Collider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 7601148881796097316}
   - component: {fileID: 1448377006509844778}
   - component: {fileID: 3599865810189604430}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Projectile Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6180615322789811936}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Projectile Trajectory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 2340734458560861122}
   - component: {fileID: 4976561363699585292}
   - component: {fileID: 85079456763906077}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gel Gal
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -388,9 +388,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 4.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -411,7 +411,7 @@ MonoBehaviour:
   cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
     type: 3}
   crateDropContainer: {fileID: 8008116500128761097}
-  baseMoveSpeed: 1500
+  baseMoveSpeed: 2000
   sprintSpeed: 8000
   jumpSpeed: 600
 --- !u!114 &2340734458560861122
@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8437260077558086818}
   - component: {fileID: 8316706618914243890}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Crate Drop Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}

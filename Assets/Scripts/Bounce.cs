@@ -18,13 +18,14 @@ public class Bounce : MonoBehaviour {
             Quaternion bounceAngle = Quaternion.AngleAxis(180, contact.normal);
             Vector2 direction = Vector2.Reflect(lastVelocity, contact.normal);
 
-            //rb.gravityScale = 0;
             if (transform.rotation.eulerAngles.z == 0 || transform.rotation.eulerAngles.z == 180) {
                 // area is on the ground or ceiling
                 direction.y = 10f * Mathf.Sign(direction.y);
-                direction.x = lastVelocity.x;
-                    
-
+                if (Mathf.Sign(lastVelocity.x) > 0) { // moving right
+                    direction.x = Mathf.Clamp(lastVelocity.x, 1, 5);
+                } else {
+                    direction.x = Mathf.Clamp(lastVelocity.x, -5, -1);
+                }
             } else {
                 direction.x = 7f * Mathf.Sign(direction.x);
                 direction.y = 14f * Mathf.Sign(direction.y);

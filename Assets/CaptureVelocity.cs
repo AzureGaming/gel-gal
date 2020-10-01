@@ -11,7 +11,6 @@ public class CaptureVelocity : MonoBehaviour {
                 lastVelocity = velocity;
 
             }
-            Debug.Log("Store" + lastVelocity);
         }
     }
 }

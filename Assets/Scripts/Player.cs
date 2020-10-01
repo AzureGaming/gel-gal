@@ -102,7 +102,6 @@ public class Player : MonoBehaviour {
             grounded = false;
             jumping = false;
             rb.AddForce(Vector2.up * jumpSpeed * Time.deltaTime, ForceMode2D.Impulse);
-            Debug.Log("Jump velocity" + rb.velocity);
         }
     }
 

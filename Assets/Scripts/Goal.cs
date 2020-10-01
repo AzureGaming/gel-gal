@@ -37,12 +37,14 @@ public class Goal : MonoBehaviour {
     }
 
     IEnumerator DisableCollider() {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         collider2d.enabled = false;
+        yield break;
     }
 
     IEnumerator EnableCollider() {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         collider2d.enabled = true;
+        yield break;
     }
 }

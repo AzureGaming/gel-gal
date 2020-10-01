@@ -382,16 +382,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3848794814367596523, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848794814367596523, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3848794814367596524, guid: e7a6f1f6c79a2814c92a5e07b955c875,
         type: 3}
       propertyPath: m_Name
@@ -1382,11 +1372,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666689015791603222, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbb904af11cb44d40a7f2d7022bc9ea3, type: 3}
