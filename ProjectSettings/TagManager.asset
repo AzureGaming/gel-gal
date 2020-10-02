@@ -9,6 +9,7 @@ TagManager:
   - Button Collider
   - Button Trigger
   - Crate
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Floor
   - Player Feet
-  - 
+  - Goal
   - 
   - 
   - 

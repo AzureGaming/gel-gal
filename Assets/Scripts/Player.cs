@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public delegate void Death();
+    public static event Death OnDeath;
     public delegate void Shoot(Vector2 direction, bool hasCrate);
     public static event Shoot OnShoot;
     public delegate void Aim(Vector2? direction);
@@ -124,14 +126,16 @@ public class Player : MonoBehaviour {
         Vector2 direction = mousePos - playerPos;
 
         if (direction.x > 0) {
-            //spriteRenderer.flipX = false;
             transform.localScale = startScale;
         } else {
-            //spriteRenderer.flipX = true;
             Vector3 newScale = startScale;
             newScale.x = -1;
             transform.localScale = newScale;
         }
+    }
+
+    void Die() {
+        OnDeath?.Invoke();
     }
 
     void PickUpCrate() {

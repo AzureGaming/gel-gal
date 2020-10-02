@@ -9,4 +9,5 @@ public class GameManager : MonoBehaviour {
     public static string BUTTON_COLLIDER = "Button Collider";
     public static string BUTTON_TRIGGER = "Button Trigger";
     public static string CRATE = "Crate";
+    public static string GOAL = "Goal";
 }

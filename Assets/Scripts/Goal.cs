@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Goal : MonoBehaviour {
+    public delegate void RoomClear();
+    public static event RoomClear OnRoomClear;
+
     public Animator top;
     public Animator bottom;
 
@@ -30,6 +33,13 @@ public class Goal : MonoBehaviour {
 
     private void OnEnable() {
         RoomManager.OnRoomCleared += HandleRoomClear;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Hello" + collision.name);
+        if (collision.CompareTag(GameManager.GOAL)) {
+            OnRoomClear?.Invoke();
+        }
     }
 
     void HandleRoomClear(bool valid) {
