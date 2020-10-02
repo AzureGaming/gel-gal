@@ -270,8 +270,9 @@ GameObject:
   - component: {fileID: 3848794814367596523}
   - component: {fileID: 3848794814367596521}
   - component: {fileID: 2340734458560861122}
-  - component: {fileID: 4976561363699585292}
   - component: {fileID: 85079456763906077}
+  - component: {fileID: 9197610388020343312}
+  - component: {fileID: 6774588844616876622}
   m_Layer: 10
   m_Name: Gel Gal
   m_TagString: Player
@@ -360,7 +361,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.059093684, y: 0.08511734}
@@ -432,22 +433,6 @@ MonoBehaviour:
   cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
     type: 3}
   projectileOrigin: {fileID: 2810545272462518535}
---- !u!58 &4976561363699585292
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3848794814367596524}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: -0.73}
-  serializedVersion: 2
-  m_Radius: 0.34
 --- !u!114 &85079456763906077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +455,37 @@ MonoBehaviour:
   prefabContainer: {fileID: 3490098058664709280}
   numberOfPoints: 19
   launchFactor: 2
+--- !u!95 &9197610388020343312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77c19145ae2c7774dba8b3a2ec4d8713, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6774588844616876622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d020518d2bcd33c469426efd6b1fb797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5787471171140888565
 GameObject:
   m_ObjectHideFlags: 0

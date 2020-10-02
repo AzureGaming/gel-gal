@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
+    Animator animator;
 
     float moveSpeed;
     float xMove;
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour {
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start() {
@@ -60,8 +62,12 @@ public class Player : MonoBehaviour {
         xMove = Input.GetAxis("Horizontal");
         direction = mousePos - playerPos;
 
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             jumping = true;
+            animator.SetBool("IsJumping", true);
+        } else {
+            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
 
         if (Input.GetMouseButton(1)) {
@@ -113,6 +119,7 @@ public class Player : MonoBehaviour {
             rb.gravityScale = startGravityScale;
             rb.drag = startDrag;
             rb.angularDrag = startAngularDrag;
+            animator.SetBool("IsJumping", false);
         }
     }
 
