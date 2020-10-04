@@ -62,10 +62,11 @@ public class Player : MonoBehaviour {
         xMove = Input.GetAxis("Horizontal");
         direction = mousePos - playerPos;
 
-
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             jumping = true;
-            animator.SetBool("IsJumping", true);
+            grounded = false;
+            animator.SetTrigger("Jump");
+            StartCoroutine(DetectLand());
         } else {
             animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
@@ -93,7 +94,13 @@ public class Player : MonoBehaviour {
             }
         }
 
+        animator.SetFloat("Jumping", rb.velocity.y);
         FlipToFaceMouse();
+    }
+
+    IEnumerator DetectLand() {
+        yield return new WaitUntil(() => grounded);
+        animator.SetTrigger("Land");
     }
 
     private void FixedUpdate() {
@@ -119,7 +126,6 @@ public class Player : MonoBehaviour {
             rb.gravityScale = startGravityScale;
             rb.drag = startDrag;
             rb.angularDrag = startAngularDrag;
-            animator.SetBool("IsJumping", false);
         }
     }
 
