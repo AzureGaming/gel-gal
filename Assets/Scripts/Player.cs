@@ -100,6 +100,7 @@ public class Player : MonoBehaviour {
 
     IEnumerator DetectLand() {
         yield return new WaitUntil(() => grounded);
+        Debug.Log("Land");
         animator.SetTrigger("Land");
     }
 
