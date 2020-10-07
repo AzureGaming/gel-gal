@@ -11,6 +11,7 @@ public class Bounce : MonoBehaviour {
         if (!rb) {
             return;
         }
+        Debug.Log("Hello");
 
         foreach (ContactPoint2D contact in collision.contacts) {
             float speed = 2f;

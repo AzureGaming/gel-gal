@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5502703920671376125}
   - component: {fileID: 4619215781289626690}
   - component: {fileID: -8090891259670605590}
+  - component: {fileID: -2297793624438647063}
   m_Layer: 8
   m_Name: Bounce Area
   m_TagString: Gel
@@ -145,6 +146,27 @@ MonoBehaviour:
   - {fileID: 4905072930211349435, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
   - {fileID: -8358653837020511143, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
   - {fileID: -3361141939155306037, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+--- !u!50 &-2297793624438647063
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091755490470571412}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &7424468967011254305
 GameObject:
   m_ObjectHideFlags: 0
