@@ -11,19 +11,38 @@ public class PlayerMovementController : MonoBehaviour {
     [SerializeField] float jumpSpeed = 1000f;
     bool grounded;
     bool shouldJump;
+    float xMove;
+    float moveSpeed = 2000f;
+    Vector3 startScale;
 
     private void Awake() {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        startScale = transform.localScale;
     }
 
     private void Update() {
+        xMove = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             shouldJump = true;
             animator.SetTrigger("Jump");
-        } else {
-            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
+
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            animator.SetBool("Sprinting", true);
+        } else {
+            animator.SetBool("Sprinting", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)) {
+            transform.localScale = startScale;
+        } else if (Input.GetKeyDown(KeyCode.A)) {
+            Vector3 newScale = startScale;
+            newScale.x = -1;
+            transform.localScale = newScale;
+        }
+
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     private void FixedUpdate() {
@@ -31,6 +50,7 @@ public class PlayerMovementController : MonoBehaviour {
             Jump();
         }
         IsGrounded();
+        Move();
     }
 
     void IsGrounded() {
@@ -47,6 +67,7 @@ public class PlayerMovementController : MonoBehaviour {
         } else {
             grounded = false;
             animator.SetBool("Grounded", grounded);
+            animator.SetFloat("Falling", rb.velocity.y);
         }
     }
 
@@ -54,5 +75,11 @@ public class PlayerMovementController : MonoBehaviour {
         grounded = false;
         shouldJump = false;
         rb.AddForce(Vector2.up * jumpSpeed * Time.deltaTime, ForceMode2D.Impulse);
+    }
+
+    void Move() {
+        float xForce = xMove * moveSpeed * Time.deltaTime;
+        Vector2 force = new Vector2(xForce, 0);
+        rb.AddForce(force);
     }
 }

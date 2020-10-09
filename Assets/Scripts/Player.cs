@@ -13,38 +13,18 @@ public class Player : MonoBehaviour {
     public GameObject cratePrefab;
     public GameObject crateDropContainer;
 
-    [SerializeField] float baseMoveSpeed = 6000f;
-    [SerializeField] float sprintSpeed = 8000f;
-    [SerializeField] float jumpSpeed = 1000f;
-
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
-    Animator animator;
 
-    float moveSpeed;
-    float xMove;
-    float startGravityScale;
-    bool grounded = true;
     bool sprinting = false;
-    bool jumping;
     bool canPickUp = false;
     bool hasCrate = false;
     Vector2 direction;
     Vector3 startScale;
-    float startDrag;
-    float startAngularDrag;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-    }
-
-    private void Start() {
-        startGravityScale = rb.gravityScale;
-        startScale = transform.localScale;
-        startDrag = rb.drag;
-        startAngularDrag = rb.angularDrag;
     }
 
     private void OnEnable() {
@@ -59,7 +39,6 @@ public class Player : MonoBehaviour {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 playerPos = transform.position;
 
-        xMove = Input.GetAxis("Horizontal");
         direction = mousePos - playerPos;
 
         if (Input.GetMouseButton(1)) {
@@ -72,12 +51,6 @@ public class Player : MonoBehaviour {
             OnAim?.Invoke(null);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            sprinting = true;
-        } else {
-            sprinting = false;
-        }
-
         if (Input.GetKeyDown(KeyCode.F)) {
             if (hasCrate) {
                 Instantiate(cratePrefab, crateDropContainer.transform.position, Quaternion.identity);
@@ -85,28 +58,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        animator.SetFloat("Jumping", rb.velocity.y);
-        FlipToFaceMouse();
-    }
-
-    private void FixedUpdate() {
-        if (sprinting) {
-            moveSpeed = sprintSpeed;
-        } else {
-            moveSpeed = baseMoveSpeed;
-        }
-        float xForce = xMove * moveSpeed * Time.deltaTime;
-        Vector2 force = new Vector2(xForce, 0);
-        rb.AddForce(force);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag(GameManager.FLOOR_TAG) || collision.collider.CompareTag(GameManager.BUTTON_TRIGGER) || collision.collider.CompareTag(GameManager.CRATE)) {
-            grounded = true;
-            rb.gravityScale = startGravityScale;
-            rb.drag = startDrag;
-            rb.angularDrag = startAngularDrag;
-        }
+        //FlipToFaceMouse();
     }
 
     public void CanPickup(bool value) {
