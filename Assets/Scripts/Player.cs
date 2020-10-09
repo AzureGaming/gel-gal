@@ -62,15 +62,6 @@ public class Player : MonoBehaviour {
         xMove = Input.GetAxis("Horizontal");
         direction = mousePos - playerPos;
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
-            jumping = true;
-            grounded = false;
-            animator.SetTrigger("Jump");
-            StartCoroutine(DetectLand());
-        } else {
-            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        }
-
         if (Input.GetMouseButton(1)) {
             OnAim?.Invoke(direction);
             if (Input.GetMouseButtonDown(0)) {
@@ -98,12 +89,6 @@ public class Player : MonoBehaviour {
         FlipToFaceMouse();
     }
 
-    IEnumerator DetectLand() {
-        yield return new WaitUntil(() => grounded);
-        Debug.Log("Land");
-        animator.SetTrigger("Land");
-    }
-
     private void FixedUpdate() {
         if (sprinting) {
             moveSpeed = sprintSpeed;
@@ -113,12 +98,6 @@ public class Player : MonoBehaviour {
         float xForce = xMove * moveSpeed * Time.deltaTime;
         Vector2 force = new Vector2(xForce, 0);
         rb.AddForce(force);
-
-        if (jumping) {
-            grounded = false;
-            jumping = false;
-            rb.AddForce(Vector2.up * jumpSpeed * Time.deltaTime, ForceMode2D.Impulse);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
