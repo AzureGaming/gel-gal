@@ -10,8 +10,9 @@ public class ButtonTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag(GameManager.BUTTON_TRIGGER)) {
-            OnButtonActivate?.Invoke(true);
-            button.ButtonDown();
+            Debug.Log("Hello" + collision.name);
+            //OnButtonActivate?.Invoke(true);
+            //button.ButtonDown();
         }
     }
 

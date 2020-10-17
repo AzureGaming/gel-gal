@@ -7,6 +7,8 @@ public class PlayerMovementController : MonoBehaviour {
 
     Animator animator;
     Rigidbody2D rb;
+    SpriteRenderer spriteR;
+    BoxCollider2D boxCollider;
 
     [SerializeField] float jumpSpeed = 1000f;
     bool grounded;
@@ -18,6 +20,8 @@ public class PlayerMovementController : MonoBehaviour {
     private void Awake() {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        spriteR = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
         startScale = transform.localScale;
     }
 
@@ -34,14 +38,7 @@ public class PlayerMovementController : MonoBehaviour {
             animator.SetBool("Sprinting", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.D)) {
-            transform.localScale = startScale;
-        } else if (Input.GetKeyDown(KeyCode.A)) {
-            Vector3 newScale = startScale;
-            newScale.x = -1;
-            transform.localScale = newScale;
-        }
-
+        Flip();
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
@@ -54,20 +51,30 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void IsGrounded() {
-        LayerMask layerMask = LayerMask.GetMask("Floor");
-        RaycastHit2D hit = Physics2D.Raycast(target.position, -Vector2.up, Mathf.Infinity, layerMask);
+        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.GROUNDING);
+        float rayDistance = 5f;
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, rayDistance, groundLayerMask);
+        //Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + rayDistance), Color.green);
         if (hit.collider == null) {
             return;
         }
 
         float distance = Mathf.Abs(hit.point.y - target.position.y);
-        if (distance < 0.006) {
+        if (distance < 0.08) {
             grounded = true;
             animator.SetBool("Grounded", grounded);
         } else {
             grounded = false;
             animator.SetBool("Grounded", grounded);
             animator.SetFloat("Falling", rb.velocity.y);
+        }
+    }
+
+    void Flip() {
+        if (Input.GetKeyDown(KeyCode.D)) {
+            spriteR.flipX = false;
+        } else if (Input.GetKeyDown(KeyCode.A)) {
+            spriteR.flipX = true;
         }
     }
 

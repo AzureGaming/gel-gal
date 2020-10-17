@@ -10,4 +10,5 @@ public class GameManager : MonoBehaviour {
     public static string BUTTON_TRIGGER = "Button Trigger";
     public static string CRATE = "Crate";
     public static string GOAL = "Goal";
+    public static string GROUNDING = "Grounding";
 }

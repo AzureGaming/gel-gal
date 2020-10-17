@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7320716301762878906}
   - component: {fileID: 7320716301762878885}
   - component: {fileID: 7320716301762878905}
-  - component: {fileID: 7320716301762878887}
   - component: {fileID: 7320716301762878904}
-  m_Layer: 0
+  - component: {fileID: 1798913838234921140}
+  m_Layer: 14
   m_Name: Button Sprite
   m_TagString: Button Trigger
   m_Icon: {fileID: 0}
@@ -103,6 +103,8 @@ MonoBehaviour:
     type: 3}
   downSprite: {fileID: -8744495242704893041, guid: 86f18de4e4da9e043b58015ba55783f6,
     type: 3}
+  colliderSizeUp: {x: 0.7548673, y: 0.3142159}
+  colliderSizeDown: {x: 0.7548674, y: 0.2346392}
   spriteR: {fileID: 7320716301762878906}
 --- !u!50 &7320716301762878905
 Rigidbody2D:
@@ -125,32 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &7320716301762878887
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7320716301762878886}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0014677644, y: -0.3435809}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8737737, y: 0.28986537}
-  m_EdgeRadius: 0
 --- !u!231 &7320716301762878904
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -171,6 +147,22 @@ SpringJoint2D:
   m_Distance: 0.84
   m_DampingRatio: 0
   m_Frequency: 5
+--- !u!70 &1798913838234921140
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320716301762878886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000099260666, y: -0.3412604}
+  m_Size: {x: 0.7548673, y: 0.31421593}
+  m_Direction: 1
 --- !u!1 &7320716303477352792
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7320716303477352793}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +207,7 @@ GameObject:
   - component: {fileID: 7320716303479472696}
   - component: {fileID: 7320716303479472702}
   - component: {fileID: 7320716303479472697}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button Collider
   m_TagString: Button Collider
   m_Icon: {fileID: 0}

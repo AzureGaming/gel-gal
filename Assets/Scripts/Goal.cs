@@ -21,22 +21,11 @@ public class Goal : MonoBehaviour {
         collider2d = GetComponent<BoxCollider2D>();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.O)) {
-            Open();
-        }
-
-        if (Input.GetKeyDown(KeyCode.C)) {
-            Close();
-        }
-    }
-
     private void OnEnable() {
         RoomManager.OnRoomCleared += HandleRoomClear;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Hello" + collision.name);
         if (collision.CompareTag(GameManager.GOAL)) {
             OnRoomClear?.Invoke();
         }

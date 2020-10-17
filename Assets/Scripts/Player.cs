@@ -57,26 +57,10 @@ public class Player : MonoBehaviour {
                 hasCrate = false;
             }
         }
-
-        //FlipToFaceMouse();
     }
 
     public void CanPickup(bool value) {
         canPickUp = value;
-    }
-
-    void FlipToFaceMouse() {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = transform.position;
-        Vector2 direction = mousePos - playerPos;
-
-        if (direction.x > 0) {
-            transform.localScale = startScale;
-        } else {
-            Vector3 newScale = startScale;
-            newScale.x = -1;
-            transform.localScale = newScale;
-        }
     }
 
     void Die() {
