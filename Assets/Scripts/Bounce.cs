@@ -20,7 +20,7 @@ public class Bounce : MonoBehaviour {
 
             if (transform.rotation.eulerAngles.z == 0 || transform.rotation.eulerAngles.z == 180) {
                 // area is on the ground or ceiling
-                direction.y = 10f * Mathf.Sign(direction.y);
+                direction.y = Mathf.Max(10f, direction.y) * Mathf.Sign(direction.y);
                 if (Mathf.Sign(lastVelocity.x) > 0) { // moving right
                     direction.x = Mathf.Clamp(lastVelocity.x, 1, 5);
                 } else {
