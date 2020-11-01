@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7320716301762878905}
   - component: {fileID: 7320716301762878904}
   - component: {fileID: 1798913838234921140}
+  - component: {fileID: 6793700405260932899}
   m_Layer: 14
   m_Name: Button Sprite
   m_TagString: Button Trigger
@@ -163,6 +164,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.000099260666, y: -0.3412604}
   m_Size: {x: 0.7548673, y: 0.31421593}
   m_Direction: 1
+--- !u!61 &6793700405260932899
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320716301762878886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0037160516, y: -0.19092202}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48718774, y: 0.011698723}
+  m_EdgeRadius: 0
 --- !u!1 &7320716303477352792
 GameObject:
   m_ObjectHideFlags: 0
