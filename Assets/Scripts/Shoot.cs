@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour {
     public GameObject gelPrefab;
     public GameObject cratePrefab;
     public GameObject projectileOrigin;
+    public GameObject crateOrigin;
 
     private void OnEnable() {
         Player.OnShoot += SpawnProjectile;
@@ -17,7 +18,9 @@ public class Shoot : MonoBehaviour {
 
     void SpawnProjectile(Vector2 direction, bool hasCrate) {
         if (hasCrate) {
-            GameObject crateRef = Instantiate(cratePrefab, transform.position, transform.rotation);
+            Vector3 pos = crateOrigin.transform.position;
+
+            GameObject crateRef = Instantiate(cratePrefab, pos, transform.rotation);
             Vector3 velocity = projectileOrigin.transform.right * (direction.magnitude * 2f);
 
             crateRef.GetComponent<Rigidbody2D>().velocity = velocity;

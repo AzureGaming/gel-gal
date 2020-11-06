@@ -53,7 +53,8 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.F)) {
             if (hasCrate) {
-                Instantiate(cratePrefab, crateDropContainer.transform.position, Quaternion.identity);
+                GameObject crateObj = Instantiate(cratePrefab, crateDropContainer.transform.position, Quaternion.identity);
+                crateObj.GetComponent<Rigidbody2D>().velocity = rb.velocity;
                 hasCrate = false;
             }
         }
