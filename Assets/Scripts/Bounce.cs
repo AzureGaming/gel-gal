@@ -32,12 +32,5 @@ public class Bounce : MonoBehaviour {
             }
             rb.velocity = direction * speed;
         }
-
-        StartCoroutine(EnableGravity(rb));
-    }
-
-    IEnumerator EnableGravity(Rigidbody2D rb) {
-        yield return new WaitForSeconds(0.5f);
-        //rb.gravityScale *= 1.5f;
     }
 }
