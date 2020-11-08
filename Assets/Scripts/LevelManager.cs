@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour {
     private void Awake() {
         if (instance == null) {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this);
         } else {
             Destroy(this);
         }
@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     void LoadNextLevel() {
+        Debug.Log("Load " + levelIndex);
         levelIndex++;
         SceneManager.LoadScene(levelIndex);
     }

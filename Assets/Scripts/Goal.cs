@@ -36,6 +36,10 @@ public class Goal : MonoBehaviour {
         RoomManager.OnRoomCleared += HandleRoomClear;
     }
 
+    private void OnDisable() {
+        RoomManager.OnRoomCleared -= HandleRoomClear;
+    }
+
     void HandleRoomClear(bool valid) {
         if (valid) {
             Open();
