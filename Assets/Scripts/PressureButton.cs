@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour {
+public class PressureButton : MonoBehaviour {
     public delegate void ButtonActivated(bool activated);
     public static event ButtonActivated OnButtonActivate;
 

@@ -36,12 +36,6 @@ public class Goal : MonoBehaviour {
         RoomManager.OnRoomCleared += HandleRoomClear;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision) {
-    //    if (collision.CompareTag(GameManager.GOAL)) {
-    //        OnRoomClear?.Invoke();
-    //    }
-    //}
-
     void HandleRoomClear(bool valid) {
         if (valid) {
             Open();
@@ -65,13 +59,11 @@ public class Goal : MonoBehaviour {
     }
 
     IEnumerator DisableCollider() {
-        //yield return new WaitForSeconds(0.5f);
         collider2d.enabled = false;
         yield break;
     }
 
     IEnumerator EnableCollider() {
-        //yield return new WaitForSeconds(0.5f);
         collider2d.enabled = true;
         yield break;
     }

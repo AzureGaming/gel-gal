@@ -10,11 +10,11 @@ public class RoomManager : MonoBehaviour {
     bool roomClear = false;
 
     private void OnEnable() {
-        Button.OnButtonActivate += HandleButtonPress;
+        PressureButton.OnButtonActivate += HandleButtonPress;
     }
 
     private void OnDisable() {
-        Button.OnButtonActivate -= HandleButtonPress;
+        PressureButton.OnButtonActivate -= HandleButtonPress;
     }
 
     void HandleButtonPress(bool activated) {
