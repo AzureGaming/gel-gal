@@ -463,6 +463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 6551180266830601349, guid: e7a6f1f6c79a2814c92a5e07b955c875,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6774588844616876622, guid: e7a6f1f6c79a2814c92a5e07b955c875,
         type: 3}
       propertyPath: boxCollider
@@ -482,6 +487,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2628455366111660558, guid: 617065f78fcf4364898b2391f00e9935,
+        type: 3}
+      propertyPath: isOpen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8356089081515457923, guid: 617065f78fcf4364898b2391f00e9935,
         type: 3}
       propertyPath: m_Name
@@ -587,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36d4c30f1005914ba33aa931a19b45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndex: 0
 --- !u!1 &1865896665
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +775,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2135176663

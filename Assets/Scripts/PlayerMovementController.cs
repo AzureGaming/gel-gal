@@ -54,7 +54,6 @@ public class PlayerMovementController : MonoBehaviour {
         LayerMask groundLayerMask = LayerMask.GetMask(GameManager.GROUNDING);
         float rayDistance = 5f;
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, rayDistance, groundLayerMask);
-        //Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + rayDistance), Color.green);
         if (hit.collider == null) {
             return;
         }
@@ -81,7 +80,9 @@ public class PlayerMovementController : MonoBehaviour {
     void Jump() {
         grounded = false;
         shouldJump = false;
-        rb.AddForce(Vector2.up * jumpSpeed * Time.deltaTime, ForceMode2D.Impulse);
+        Vector2 force = Vector2.up * jumpSpeed;
+        Debug.Log("Jump force: " + force);
+        rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     void Move() {
