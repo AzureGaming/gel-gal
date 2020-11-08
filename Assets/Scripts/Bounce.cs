@@ -31,15 +31,15 @@ public class Bounce : MonoBehaviour {
                 direction.y = 14f * Mathf.Sign(direction.y);
             }
 
-            if (collision.collider.CompareTag(GameManager.PLAYER_TAG)) {
-                // Ensuring the object bounces back to the peak of it's original arc is difficult
-                // Ref: https://answers.unity.com/questions/854006/jumping-a-specific-height-using-velocity-gravity.html
-                rb.velocity = Vector2.zero;
-                Vector2 newVelocity = lastVelocity;
-                newVelocity.y = Mathf.Max(20f, direction.y * speed);
-                newVelocity.x = direction.x;
-                rb.velocity = newVelocity;
-            }
+            //if (collision.collider.CompareTag(GameManager.PLAYER_TAG)) {
+            // Ensuring the object bounces back to the peak of it's original arc is difficult
+            // Ref: https://answers.unity.com/questions/854006/jumping-a-specific-height-using-velocity-gravity.html
+            rb.velocity = Vector2.zero;
+            Vector2 newVelocity = lastVelocity;
+            newVelocity.y = Mathf.Max(20f, direction.y * speed);
+            newVelocity.x = direction.x;
+            rb.velocity = newVelocity;
+            //}
         }
     }
 }
