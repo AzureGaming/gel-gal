@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4892340935813355553}
   - component: {fileID: 8677074487501238496}
-  m_Layer: 13
+  - component: {fileID: 6767438245983980645}
+  - component: {fileID: 1530126469447777517}
+  m_Layer: 0
   m_Name: Player Trigger
-  m_TagString: Goal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +59,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14737558, y: 3.5115333}
   m_EdgeRadius: 0
+--- !u!50 &6767438245983980645
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941555370229319109}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1530126469447777517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941555370229319109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983a96ac391548c499be14298626c060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8356089080412375113
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +346,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de73a8a8c0e68c64096b1f332dca5d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
   top: {fileID: 8356089080614603950}
   bottom: {fileID: 8356089080412375114}
+  topOpen: {fileID: 4784669525095450271, guid: bf8cd178b51afeb4facdd3bf11e5bff9, type: 3}
+  bottomOpen: {fileID: -7386573038455524410, guid: bf8cd178b51afeb4facdd3bf11e5bff9,
+    type: 3}
 --- !u!61 &5848564959901803775
 BoxCollider2D:
   m_ObjectHideFlags: 0

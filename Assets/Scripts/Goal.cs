@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Goal : MonoBehaviour {
-    public delegate void RoomClear();
-    public static event RoomClear OnRoomClear;
+    public bool isOpen = false;
 
     public Animator top;
     public Animator bottom;
+    public Sprite topOpen;
+    public Sprite bottomOpen;
 
     BoxCollider2D collider2d;
 
@@ -21,15 +22,25 @@ public class Goal : MonoBehaviour {
         collider2d = GetComponent<BoxCollider2D>();
     }
 
+    private void Start() {
+        if (isOpen) {
+            top.enabled = false;
+            bottom.enabled = false;
+            top.GetComponent<SpriteRenderer>().sprite = topOpen;
+            bottom.GetComponent<SpriteRenderer>().sprite = bottomOpen;
+            StartCoroutine(DisableCollider());
+        }
+    }
+
     private void OnEnable() {
         RoomManager.OnRoomCleared += HandleRoomClear;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag(GameManager.GOAL)) {
-            OnRoomClear?.Invoke();
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision) {
+    //    if (collision.CompareTag(GameManager.GOAL)) {
+    //        OnRoomClear?.Invoke();
+    //    }
+    //}
 
     void HandleRoomClear(bool valid) {
         if (valid) {
