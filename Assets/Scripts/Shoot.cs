@@ -16,7 +16,7 @@ public class Shoot : MonoBehaviour {
         Player.OnShoot -= SpawnProjectile;
     }
 
-    void SpawnProjectile(Vector2 direction, bool hasCrate) {
+    void SpawnProjectile(Vector2 direction, bool hasCrate, int gelType) {
         if (hasCrate) {
             Vector3 pos = crateOrigin.transform.position;
 

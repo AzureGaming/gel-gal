@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Gel : MonoBehaviour {
+    public delegate void SpawnGelArea(GameObject gelAreaRef, int type);
+    public static event SpawnGelArea OnSpawnGelArea;
+
     public GameObject collisionParticlesPrefab;
     public GameObject bounceAreaPrefab;
 
@@ -23,6 +26,8 @@ public class Gel : MonoBehaviour {
         hitPos.x = xPos - 0.01f * normal.x;
         hitPos.y = yPos - 0.01f * normal.y;
 
-        Instantiate(bounceAreaPrefab, hitPos, newRot);
+        GameObject instance = Instantiate(bounceAreaPrefab, hitPos, newRot);
+        instance.GetComponent<GelArea>().Init(0);
+        OnSpawnGelArea?.Invoke(instance, 0);
     }
 }

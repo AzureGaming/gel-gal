@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     public delegate void Death();
     public static event Death OnDeath;
-    public delegate void Shoot(Vector2 direction, bool hasCrate);
+    public delegate void Shoot(Vector2 direction, bool hasCrate, int gelType);
     public static event Shoot OnShoot;
     public delegate void Aim(Vector2? direction);
     public static event Aim OnAim;
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
     bool sprinting = false;
     bool canPickUp = false;
     bool hasCrate = false;
+    int equippedGel = 0;
     Vector2 direction;
     Vector3 startScale;
 
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour {
         if (Input.GetMouseButton(1)) {
             OnAim?.Invoke(direction);
             if (Input.GetMouseButtonDown(0)) {
-                OnShoot?.Invoke(direction, hasCrate);
+                OnShoot?.Invoke(direction, hasCrate, equippedGel);
                 hasCrate = false;
             }
         } else {

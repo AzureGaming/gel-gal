@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
+    public delegate void LoadLevel();
+    public static event LoadLevel OnLoadLevel;
+    
     public int levelIndex = 0;
     static LevelManager instance;
 
@@ -27,7 +30,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     void LoadNextLevel() {
-        Debug.Log("Load " + levelIndex);
+        OnLoadLevel?.Invoke();
         levelIndex++;
         SceneManager.LoadScene(levelIndex);
     }
