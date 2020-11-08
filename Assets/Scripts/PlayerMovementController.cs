@@ -10,11 +10,12 @@ public class PlayerMovementController : MonoBehaviour {
     SpriteRenderer spriteR;
     BoxCollider2D boxCollider;
 
-    [SerializeField] float jumpSpeed = 1000f;
+    [SerializeField] float jumpSpeed = 2000f;
+    [SerializeField] float moveSpeed = 5000f;
+    [SerializeField] float airMoveSpeed = 3000f;
     bool grounded;
     bool shouldJump;
     float xMove;
-    float moveSpeed = 2000f;
     Vector3 startScale;
 
     private void Awake() {
@@ -81,13 +82,17 @@ public class PlayerMovementController : MonoBehaviour {
         grounded = false;
         shouldJump = false;
         Vector2 force = Vector2.up * jumpSpeed;
-        Debug.Log("Jump force: " + force);
         rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     void Move() {
-        float xForce = xMove * moveSpeed * Time.deltaTime;
-        Vector2 force = new Vector2(xForce, 0);
+        float xForce;
+        if (!grounded) {
+            xForce = xMove * airMoveSpeed;
+        } else {
+            xForce = xMove * moveSpeed;
+        }
+        Vector2 force = new Vector2(xForce * Time.deltaTime, 0);
         rb.AddForce(force);
     }
 }
