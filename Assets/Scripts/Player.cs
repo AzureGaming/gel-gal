@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
+    Animator animator;
 
     bool sprinting = false;
     bool canPickUp = false;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour {
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable() {
@@ -45,8 +47,8 @@ public class Player : MonoBehaviour {
         if (Input.GetMouseButton(1)) {
             OnAim?.Invoke(direction);
             if (Input.GetMouseButtonDown(0)) {
-                OnShoot?.Invoke(direction, hasCrate, equippedGel);
-                hasCrate = false;
+                animator.SetTrigger("Shoot");
+                StartCoroutine(DelayShoot());
             }
         } else {
             OnAim?.Invoke(null);
@@ -59,6 +61,11 @@ public class Player : MonoBehaviour {
                 hasCrate = false;
             }
         }
+    }
+
+    IEnumerator DelayShoot() {
+        yield return new WaitForSeconds(0.25f);
+        OnShoot?.Invoke(direction, false, equippedGel);
     }
 
     public void CanPickup(bool value) {
