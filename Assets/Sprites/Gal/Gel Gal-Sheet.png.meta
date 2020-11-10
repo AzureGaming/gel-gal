@@ -314,6 +314,12 @@ TextureImporter:
   - first:
       213: 2119594402015808171
     second: Gel Gal-Sheet_62
+  - first:
+      213: -6129712067173291650
+    second: Gel Gal-Sheet_41
+  - first:
+      213: -586372971939285531
+    second: Gel Gal-Sheet_42
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -417,11 +423,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
-        width: 35
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -437,12 +443,12 @@ TextureImporter:
       name: Gel Gal-Sheet_6
       rect:
         serializedVersion: 2
-        x: 35
-        y: 150
-        width: 35
+        x: 55
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -458,12 +464,12 @@ TextureImporter:
       name: Gel Gal-Sheet_10
       rect:
         serializedVersion: 2
-        x: 175
-        y: 150
-        width: 35
+        x: 275
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -479,12 +485,12 @@ TextureImporter:
       name: Gel Gal-Sheet_11
       rect:
         serializedVersion: 2
-        x: 210
-        y: 150
-        width: 35
+        x: 330
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -500,12 +506,12 @@ TextureImporter:
       name: Gel Gal-Sheet_15
       rect:
         serializedVersion: 2
-        x: 70
-        y: 100
-        width: 35
+        x: 110
+        y: 200
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,11 +528,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 50
-        width: 35
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -542,12 +548,12 @@ TextureImporter:
       name: Gel Gal-Sheet_7
       rect:
         serializedVersion: 2
-        x: 70
-        y: 150
-        width: 35
+        x: 110
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -563,12 +569,12 @@ TextureImporter:
       name: Gel Gal-Sheet_8
       rect:
         serializedVersion: 2
-        x: 105
-        y: 150
-        width: 35
+        x: 165
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -584,12 +590,12 @@ TextureImporter:
       name: Gel Gal-Sheet_9
       rect:
         serializedVersion: 2
-        x: 140
-        y: 150
-        width: 35
+        x: 220
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -605,12 +611,12 @@ TextureImporter:
       name: Gel Gal-Sheet_12
       rect:
         serializedVersion: 2
-        x: 245
-        y: 150
-        width: 35
+        x: 385
+        y: 250
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -627,11 +633,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 35
+        y: 200
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.5}
+      pivot: {x: 0.2929118, y: 0.50351137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -647,12 +653,12 @@ TextureImporter:
       name: Gel Gal-Sheet_14
       rect:
         serializedVersion: 2
-        x: 35
-        y: 100
-        width: 35
+        x: 55
+        y: 200
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.5}
+      pivot: {x: 0.29100177, y: 0.5163507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -668,12 +674,12 @@ TextureImporter:
       name: Gel Gal-Sheet_17
       rect:
         serializedVersion: 2
-        x: 35
-        y: 50
-        width: 35
+        x: 55
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -689,12 +695,12 @@ TextureImporter:
       name: Gel Gal-Sheet_18
       rect:
         serializedVersion: 2
-        x: 70
-        y: 50
-        width: 35
+        x: 110
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -710,12 +716,12 @@ TextureImporter:
       name: Gel Gal-Sheet_19
       rect:
         serializedVersion: 2
-        x: 105
-        y: 50
-        width: 35
+        x: 165
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -731,12 +737,12 @@ TextureImporter:
       name: Gel Gal-Sheet_20
       rect:
         serializedVersion: 2
-        x: 140
-        y: 50
-        width: 35
+        x: 220
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -752,12 +758,12 @@ TextureImporter:
       name: Gel Gal-Sheet_21
       rect:
         serializedVersion: 2
-        x: 175
-        y: 50
-        width: 35
+        x: 275
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -773,12 +779,12 @@ TextureImporter:
       name: Gel Gal-Sheet_22
       rect:
         serializedVersion: 2
-        x: 210
-        y: 50
-        width: 35
+        x: 330
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -794,12 +800,12 @@ TextureImporter:
       name: Gel Gal-Sheet_23
       rect:
         serializedVersion: 2
-        x: 245
-        y: 50
-        width: 35
+        x: 385
+        y: 150
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -816,11 +822,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 35
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -836,12 +842,12 @@ TextureImporter:
       name: Gel Gal-Sheet_25
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 35
+        x: 55
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -857,12 +863,12 @@ TextureImporter:
       name: Gel Gal-Sheet_26
       rect:
         serializedVersion: 2
-        x: 70
-        y: 0
-        width: 35
+        x: 110
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -878,12 +884,12 @@ TextureImporter:
       name: Gel Gal-Sheet_27
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 35
+        x: 165
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -899,12 +905,12 @@ TextureImporter:
       name: Gel Gal-Sheet_28
       rect:
         serializedVersion: 2
-        x: 140
-        y: 0
-        width: 35
+        x: 220
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -920,12 +926,12 @@ TextureImporter:
       name: Gel Gal-Sheet_29
       rect:
         serializedVersion: 2
-        x: 175
-        y: 0
-        width: 35
+        x: 275
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -941,12 +947,12 @@ TextureImporter:
       name: Gel Gal-Sheet_30
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 35
+        x: 330
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -962,12 +968,12 @@ TextureImporter:
       name: Gel Gal-Sheet_31
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
-        width: 35
+        x: 385
+        y: 100
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -984,11 +990,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 35
+        y: 300
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1004,12 +1010,12 @@ TextureImporter:
       name: Gel Gal-Sheet_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 200
-        width: 35
+        x: 55
+        y: 300
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1025,12 +1031,12 @@ TextureImporter:
       name: Gel Gal-Sheet_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 200
-        width: 35
+        x: 110
+        y: 300
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1046,12 +1052,12 @@ TextureImporter:
       name: Gel Gal-Sheet_3
       rect:
         serializedVersion: 2
-        x: 105
-        y: 200
-        width: 35
+        x: 165
+        y: 300
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1067,12 +1073,12 @@ TextureImporter:
       name: Gel Gal-Sheet_4
       rect:
         serializedVersion: 2
-        x: 140
-        y: 200
-        width: 35
+        x: 220
+        y: 300
+        width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.3839974, y: 0.4052646}
+      pivot: {x: 0.2550162, y: 0.4015356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1080,6 +1086,237 @@ TextureImporter:
       bones: []
       spriteID: 5413f3f9efd69b3b0800000000000000
       internalID: -5496240929868140219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b33f044c53bbcae0800000000000000
+      internalID: -1527930439701941321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246091f0c55db6100800000000000000
+      internalID: 102410007912973890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203d4afcc12fad470800000000000000
+      internalID: 8420308658879255298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d308212daa67fdaa0800000000000000
+      internalID: -6134053691414380483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3a5809c90f6bfa0800000000000000
+      internalID: -5785172116080581633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ac8f5b880f67cd0800000000000000
+      internalID: -2560594868154349004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e659d59394a552d0800000000000000
+      internalID: -3290542998943082776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec450bf052ae7b3b0800000000000000
+      internalID: -5496667375284497202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6a5eab62f095b60800000000000000
+      internalID: 7735230494004324039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79e5bcf953eeeaa0800000000000000
+      internalID: -6129712067173291650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e53ba583e8ccd7f0800000000000000
+      internalID: -586372971939285531
       vertices: []
       indices: 
       edges: []
