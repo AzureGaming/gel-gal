@@ -41,6 +41,7 @@ public class PlayerMovementController : MonoBehaviour {
 
         Flip();
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("Vertical Velocity", rb.velocity.y);
     }
 
     private void FixedUpdate() {
@@ -66,7 +67,6 @@ public class PlayerMovementController : MonoBehaviour {
         } else {
             grounded = false;
             animator.SetBool("Grounded", grounded);
-            animator.SetFloat("Falling", rb.velocity.y);
         }
     }
 
