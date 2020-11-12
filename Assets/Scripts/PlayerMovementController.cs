@@ -5,18 +5,19 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour {
     public Transform target;
 
+    float jumpSpeed = 1000f;
+    float moveSpeed = 2000f;
+    float airMoveSpeed = 1500f;
+    bool grounded;
+    bool shouldJump;
+    float xMove;
+    float baseAirMoveSpeed;
+    Vector3 startScale;
+
     Animator animator;
     Rigidbody2D rb;
     SpriteRenderer spriteR;
     BoxCollider2D boxCollider;
-
-    [SerializeField] float jumpSpeed = 2000f;
-    [SerializeField] float moveSpeed = 5000f;
-    [SerializeField] float airMoveSpeed = 3000f;
-    bool grounded;
-    bool shouldJump;
-    float xMove;
-    Vector3 startScale;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -24,6 +25,7 @@ public class PlayerMovementController : MonoBehaviour {
         spriteR = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
         startScale = transform.localScale;
+        baseAirMoveSpeed = airMoveSpeed;
     }
 
     private void Update() {
@@ -50,6 +52,14 @@ public class PlayerMovementController : MonoBehaviour {
         }
         IsGrounded();
         Move();
+    }
+
+    private void OnEnable() {
+        BounceArea.OnBounce += SlowAirMovement;
+    }
+
+    private void OnDisable() {
+        BounceArea.OnBounce -= SlowAirMovement;
     }
 
     void IsGrounded() {
@@ -94,5 +104,15 @@ public class PlayerMovementController : MonoBehaviour {
         }
         Vector2 force = new Vector2(xForce * Time.deltaTime, 0);
         rb.AddForce(force);
+    }
+
+    void SlowAirMovement() {
+        airMoveSpeed = 500f;
+        StartCoroutine(ResetAirMovement());
+    }
+
+    IEnumerator ResetAirMovement() {
+        yield return new WaitForSeconds(0.5f);
+        airMoveSpeed = baseAirMoveSpeed;
     }
 }

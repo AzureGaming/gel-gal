@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bounce : MonoBehaviour {
+public class BounceArea : MonoBehaviour {
     [SerializeField] float bounceFactor = 4000f;
     [SerializeField] float gravityApplied = 50f;
+    public delegate void Bounce();
+    public static event Bounce OnBounce;
 
     private void OnCollisionEnter2D(Collision2D collision) {
         Rigidbody2D rb = collision.collider.attachedRigidbody;
@@ -15,7 +17,6 @@ public class Bounce : MonoBehaviour {
         foreach (ContactPoint2D contact in collision.contacts) {
             float speed = 1.75f;
             Vector2 lastVelocity = GetComponentInChildren<CaptureVelocity>().lastVelocity;
-            Quaternion bounceAngle = Quaternion.AngleAxis(180, contact.normal);
             Vector2 direction = Vector2.Reflect(lastVelocity, contact.normal);
 
             if (transform.rotation.eulerAngles.z == 0 || transform.rotation.eulerAngles.z == 180) {
@@ -27,11 +28,10 @@ public class Bounce : MonoBehaviour {
                     direction.x = Mathf.Clamp(lastVelocity.x, -5, -1);
                 }
             } else {
-                direction.x = 7f * Mathf.Sign(direction.x);
+                direction.x = 10f * Mathf.Sign(direction.x);
                 direction.y = 14f * Mathf.Sign(direction.y);
             }
 
-            //if (collision.collider.CompareTag(GameManager.PLAYER_TAG)) {
             // Ensuring the object bounces back to the peak of it's original arc is difficult
             // Ref: https://answers.unity.com/questions/854006/jumping-a-specific-height-using-velocity-gravity.html
             rb.velocity = Vector2.zero;
@@ -39,7 +39,7 @@ public class Bounce : MonoBehaviour {
             newVelocity.y = Mathf.Max(20f, direction.y * speed);
             newVelocity.x = direction.x;
             rb.velocity = newVelocity;
-            //}
+            OnBounce?.Invoke();
         }
     }
 }
