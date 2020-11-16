@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 652738894950045197}
   - component: {fileID: 3547292670546840892}
   - component: {fileID: 7189429449417781737}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Velocity Capture
   m_TagString: Untagged
   m_Icon: {fileID: 0}

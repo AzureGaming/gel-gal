@@ -8,7 +8,10 @@ public class BounceArea : MonoBehaviour {
     public delegate void Bounce();
     public static event Bounce OnBounce;
 
+    public bool hasCollided = false;
+
     private void OnCollisionEnter2D(Collision2D collision) {
+        hasCollided = true;
         Rigidbody2D rb = collision.collider.attachedRigidbody;
         if (!rb) {
             return;
@@ -32,6 +35,7 @@ public class BounceArea : MonoBehaviour {
                 direction.y = 14f * Mathf.Sign(direction.y);
             }
 
+
             // Ensuring the object bounces back to the peak of it's original arc is difficult
             // Ref: https://answers.unity.com/questions/854006/jumping-a-specific-height-using-velocity-gravity.html
             rb.velocity = Vector2.zero;
@@ -40,6 +44,11 @@ public class BounceArea : MonoBehaviour {
             newVelocity.x = direction.x;
             rb.velocity = newVelocity;
             OnBounce?.Invoke();
+            hasCollided = false;
+
+            //if (collision.collider.CompareTag(GameManager.PLAYER_TAG)) {
+            //    collision.collider.GetComponent<Animator>().SetTrigger("Bounce");
+            //}
         }
     }
 }

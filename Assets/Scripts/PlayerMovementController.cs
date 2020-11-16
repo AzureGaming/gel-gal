@@ -73,11 +73,10 @@ public class PlayerMovementController : MonoBehaviour {
         float distance = Mathf.Abs(hit.point.y - target.position.y);
         if (distance < 0.08) {
             grounded = true;
-            animator.SetBool("Grounded", grounded);
         } else {
             grounded = false;
-            animator.SetBool("Grounded", grounded);
         }
+        animator.SetBool("Grounded", grounded);
     }
 
     void Flip() {
