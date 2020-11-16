@@ -65,7 +65,8 @@ public class Player : MonoBehaviour {
 
     IEnumerator DelayShoot() {
         yield return new WaitForSeconds(0.25f);
-        OnShoot?.Invoke(direction, false, equippedGel);
+        OnShoot?.Invoke(direction, hasCrate, equippedGel);
+        hasCrate = false;
     }
 
     public void CanPickup(bool value) {
@@ -81,7 +82,7 @@ public class Player : MonoBehaviour {
     }
 
     IEnumerator CratePickUpCooldown() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0f);
         hasCrate = true;
     }
 }

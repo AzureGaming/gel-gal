@@ -203,7 +203,7 @@ SpriteRenderer:
   m_Size: {x: 0.45, y: 0.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &34268909
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d60ae6e6e3314d54f83c0148f82c45e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 340f66ba212685b4e9adac1b5900e0e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -803,11 +803,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8437260077558086818, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a6f1f6c79a2814c92a5e07b955c875, type: 3}
 --- !u!1 &831172337
@@ -1007,7 +1002,7 @@ SpriteRenderer:
   m_Size: {x: 0.45, y: 0.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1453291255

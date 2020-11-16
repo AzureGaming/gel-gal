@@ -468,11 +468,6 @@ PrefabInstance:
       propertyPath: boxCollider
       value: 
       objectReference: {fileID: 664182528}
-    - target: {fileID: 8437260077558086818, guid: e7a6f1f6c79a2814c92a5e07b955c875,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a6f1f6c79a2814c92a5e07b955c875, type: 3}
 --- !u!1001 &853777823
