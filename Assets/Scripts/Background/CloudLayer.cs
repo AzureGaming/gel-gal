@@ -25,13 +25,11 @@ public class CloudLayer : MonoBehaviour {
             yield return new WaitForSeconds(1f);
             int randomIndex = Random.Range(0, clouds.Length);
             GameObject randomCloud = clouds[randomIndex];
-            float maxX = spawnArea.transform.position.x + spawnArea.transform.localScale.x / 2;
-            float maxY = spawnArea.transform.position.y + spawnArea.transform.localScale.y / 2;
-            float minX = -maxX;
-            float minY = spawnArea.transform.position.y - spawnArea.transform.localScale.y / 2;
-            Vector3 randomPos = new Vector3(maxX, minY);
+            float randomPosY = Random.Range(spawnArea.minY, spawnArea.maxY);
+            Vector3 randomPos = new Vector3(spawnArea.maxX, randomPosY);
 
-            Instantiate(randomCloud, randomPos, Quaternion.identity, transform);
+            GameObject cloud = Instantiate(randomCloud, transform, false);
+            cloud.transform.position = randomPos;
         }
     }
 }

@@ -12,6 +12,6 @@ public class CloudSpawnArea : MonoBehaviour {
         maxX = transform.position.x + transform.localScale.x / 2;
         maxY = transform.position.y + transform.localScale.y / 2;
         minX = -maxX;
-        minY = -maxY;
+        minY = maxY - transform.localScale.y;
     }
 }
