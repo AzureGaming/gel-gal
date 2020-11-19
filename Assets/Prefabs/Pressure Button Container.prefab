@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1509480683
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5060437458241130931, guid: 86f18de4e4da9e043b58015ba55783f6,
     type: 3}
@@ -106,7 +106,6 @@ MonoBehaviour:
     type: 3}
   colliderSizeUp: {x: 0.7548673, y: 0.3142159}
   colliderSizeDown: {x: 0.7548674, y: 0.2346392}
-  spriteR: {fileID: 7320716301762878906}
 --- !u!50 &7320716301762878905
 Rigidbody2D:
   serializedVersion: 4
