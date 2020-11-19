@@ -22,7 +22,9 @@ public class CloudLayer : MonoBehaviour {
 
     IEnumerator SpawnCloud() {
         for (; ; ) {
-            yield return new WaitForSeconds(1f);
+            float randomWait = Random.Range(1f, 2f);
+            Debug.Log("spawn cloud in " + randomWait + " seconds");
+            yield return new WaitForSeconds(randomWait);
             int randomIndex = Random.Range(0, clouds.Length);
             GameObject randomCloud = clouds[randomIndex];
             float randomPosY = Random.Range(spawnArea.minY, spawnArea.maxY);

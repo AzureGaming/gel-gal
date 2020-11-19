@@ -11,7 +11,7 @@ public class Cloud : MonoBehaviour {
 
     void Update() {
         Vector3 newPos = transform.position;
-        newPos.x -= 0.1f;
+        newPos.x -= 0.03f;
         transform.position = newPos;
 
         if (!IsWithinBounds()) {
