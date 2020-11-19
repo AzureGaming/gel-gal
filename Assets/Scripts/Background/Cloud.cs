@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cloud : MonoBehaviour {
-    public GameObject bounds;
+    CloudSpawnArea spawnArea;
+
+    private void Awake() {
+        spawnArea = GetComponentInParent<CloudLayer>().spawnArea;
+    }
 
     void Update() {
         Vector3 newPos = transform.position;
@@ -16,16 +20,11 @@ public class Cloud : MonoBehaviour {
     }
 
     bool IsWithinBounds() {
-        float maxX = bounds.transform.position.x + bounds.transform.localScale.x / 2;
-        float maxY = bounds.transform.position.y + bounds.transform.localScale.y / 2;
-        float minX = -maxX;
-        float minY = bounds.transform.position.y - bounds.transform.localScale.y / 2;
-
-        if (transform.position.x > maxX || transform.position.x < minX) {
+        if (transform.position.x < spawnArea.minX) {
             return false;
         }
 
-        if (transform.position.y > maxY || transform.position.y < minY) {
+        if (transform.position.y < spawnArea.minY) {
             return false;
         }
 

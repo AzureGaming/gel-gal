@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloudLayer : MonoBehaviour {
     public GameObject[] clouds;
-    public GameObject bounds;
+    public CloudSpawnArea spawnArea;
 
     private void Start() {
         InitSpawn();
@@ -25,13 +25,13 @@ public class CloudLayer : MonoBehaviour {
             yield return new WaitForSeconds(1f);
             int randomIndex = Random.Range(0, clouds.Length);
             GameObject randomCloud = clouds[randomIndex];
-            float maxX = bounds.transform.position.x + bounds.transform.localScale.x / 2;
-            float maxY = bounds.transform.position.y + bounds.transform.localScale.y / 2;
+            float maxX = spawnArea.transform.position.x + spawnArea.transform.localScale.x / 2;
+            float maxY = spawnArea.transform.position.y + spawnArea.transform.localScale.y / 2;
             float minX = -maxX;
-            float minY = bounds.transform.position.y - bounds.transform.localScale.y / 2;
-            Vector3 pos = new Vector3(maxX, minY);
+            float minY = spawnArea.transform.position.y - spawnArea.transform.localScale.y / 2;
+            Vector3 randomPos = new Vector3(maxX, minY);
 
-            Instantiate(randomCloud, pos, Quaternion.identity, transform);
+            Instantiate(randomCloud, randomPos, Quaternion.identity, transform);
         }
     }
 }
