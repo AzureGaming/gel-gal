@@ -22,7 +22,7 @@ public class CloudLayer : MonoBehaviour {
 
     IEnumerator SpawnCloud() {
         for (; ; ) {
-            float randomWait = Random.Range(1f, 2f);
+            float randomWait = Random.Range(3f, 7f);
             Debug.Log("spawn cloud in " + randomWait + " seconds");
             yield return new WaitForSeconds(randomWait);
             int randomIndex = Random.Range(0, clouds.Length);

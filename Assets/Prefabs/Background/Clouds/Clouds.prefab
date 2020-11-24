@@ -104,7 +104,7 @@ PrefabInstance:
     - target: {fileID: 4885896550557266317, guid: 4f37dd69d698e6e4ea730c59f1968a01,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f37dd69d698e6e4ea730c59f1968a01, type: 3}
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 4885896550557266317, guid: 4f37dd69d698e6e4ea730c59f1968a01,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.02
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 4885896550557266317, guid: 4f37dd69d698e6e4ea730c59f1968a01,
         type: 3}
@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 4885896550557266317, guid: 4f37dd69d698e6e4ea730c59f1968a01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.088961
+      value: 3.52
       objectReference: {fileID: 0}
     - target: {fileID: 4885896550557266317, guid: 4f37dd69d698e6e4ea730c59f1968a01,
         type: 3}
@@ -221,6 +221,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5085455485726445816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &408157079764088621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4843967064986052565, guid: 4f37dd69d698e6e4ea730c59f1968a01,
+    type: 3}
+  m_PrefabInstance: {fileID: 5085455485726445816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12a4ae0b6fd40e4789245f5ab1a6f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5085455485957257309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,7 +405,7 @@ PrefabInstance:
     - target: {fileID: 5618963718186385534, guid: 9d7b23be85f2f784286e1764bf57cd6b,
         type: 3}
       propertyPath: clouds.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5618963718186385534, guid: 9d7b23be85f2f784286e1764bf57cd6b,
         type: 3}
@@ -459,13 +471,19 @@ PrefabInstance:
         type: 3}
       propertyPath: clouds.Array.data[10]
       value: 
-      objectReference: {fileID: 6744567732186220886, guid: 52b1fff38312b8e40901de4e1f0e94d8,
+      objectReference: {fileID: 6744567732186220886, guid: a13b775f57eee2e4cb8e206243370171,
         type: 3}
     - target: {fileID: 5618963718186385534, guid: 9d7b23be85f2f784286e1764bf57cd6b,
         type: 3}
       propertyPath: spawnArea
       value: 
-      objectReference: {fileID: 5072216142412102268}
+      objectReference: {fileID: 408157079764088621}
+    - target: {fileID: 5618963718186385534, guid: 9d7b23be85f2f784286e1764bf57cd6b,
+        type: 3}
+      propertyPath: clouds.Array.data[11]
+      value: 
+      objectReference: {fileID: 6744567732186220886, guid: 52b1fff38312b8e40901de4e1f0e94d8,
+        type: 3}
     - target: {fileID: 5618963718186385535, guid: 9d7b23be85f2f784286e1764bf57cd6b,
         type: 3}
       propertyPath: m_LocalPosition.x
