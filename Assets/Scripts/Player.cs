@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        equippedGel = GameManager.GelType.Bounce;
+        equippedGel = GameManager.GelType.Ethereal;
     }
 
     private void OnEnable() {
