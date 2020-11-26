@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4748045722655652562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1554598145726837385, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_Name
+      value: Gel Bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837390, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750757505731579414, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744306983634771090, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: gelAreaPrefab
+      value: 
+      objectReference: {fileID: 7143749016148818989, guid: 4f89d4e808a7e454794ed0301a2ebfc9,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a6443ddc26c8404b9c8b92c0369e16e, type: 3}

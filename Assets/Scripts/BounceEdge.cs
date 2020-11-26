@@ -12,7 +12,7 @@ public class BounceEdge : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         Rigidbody2D rb = collision.collider.attachedRigidbody;
         bool isValidCollision = GetComponentInParent<BounceArea>().hasCollided;
-        Debug.Log("Valid edge" + isValidCollision);
+
         if (!rb || !isValidCollision) {
             return;
         }

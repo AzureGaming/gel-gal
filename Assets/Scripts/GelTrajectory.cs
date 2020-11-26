@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GelTrajectory : MonoBehaviour {
-    public GameObject gelPrefab;
     public GameObject dotPrefab;
     public GameObject arrowPrefab;
     public GameObject[] points;

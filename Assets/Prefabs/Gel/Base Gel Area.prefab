@@ -120,12 +120,10 @@ GameObject:
   - component: {fileID: 4091755490470571435}
   - component: {fileID: 4091755490470571434}
   - component: {fileID: 5502703920671376125}
-  - component: {fileID: 4619215781289626690}
   - component: {fileID: -8090891259670605590}
   - component: {fileID: -2297793624438647063}
-  - component: {fileID: 8357736154699481788}
   m_Layer: 8
-  m_Name: Bounce Area
+  m_Name: Gel Area
   m_TagString: Gel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,8 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 1509480683
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0, g: 0.57601166, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +194,7 @@ SpriteRenderer:
   m_Size: {x: 0.125, y: 0.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &5502703920671376125
@@ -226,21 +223,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.90546674, y: 0.19569254}
   m_EdgeRadius: 0
---- !u!114 &4619215781289626690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4091755490470571412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a8da124b59e174e990ebd0c8fd0fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceFactor: 4000
-  gravityApplied: 1
-  hasCollided: 0
 --- !u!114 &-8090891259670605590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,12 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3006b91c4b3d3944b06c4bbb020e1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
-  - {fileID: -7810869803583587679, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
-  - {fileID: 4905072930211349435, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
-  - {fileID: -8358653837020511143, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
-  - {fileID: -3361141939155306037, guid: 45eb89fa0c0e61349a9d13ae334ba181, type: 3}
+  sprites: []
 --- !u!50 &-2297793624438647063
 Rigidbody2D:
   serializedVersion: 4
@@ -280,18 +257,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8357736154699481788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4091755490470571412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c31a57feb31e5b428d2cf3ba3e00ed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6940711110661634804
 GameObject:
   m_ObjectHideFlags: 0
