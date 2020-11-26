@@ -10,6 +10,7 @@ TagManager:
   - Button Trigger
   - Crate
   - Goal
+  - Temp
   layers:
   - Default
   - TransparentFX

@@ -155,6 +155,21 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3683312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.872355
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83db47fb40d8d1946b12a08164e43f84, type: 3}
 --- !u!1 &5124353931718076593 stripped
