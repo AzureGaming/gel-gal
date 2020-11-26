@@ -4072,10 +4072,15 @@ PrefabInstance:
       propertyPath: m_TileColorArray.Array.data[4].m_Data.a
       value: NaN
       objectReference: {fileID: 0}
+    - target: {fileID: 993981250290296244, guid: fc602a5f6599d1e4eb04255c35736453,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.5176471
+      objectReference: {fileID: 0}
     - target: {fileID: 993981250290296245, guid: fc602a5f6599d1e4eb04255c35736453,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 993981250290296246, guid: fc602a5f6599d1e4eb04255c35736453,
         type: 3}
@@ -4120,7 +4125,7 @@ PrefabInstance:
     - target: {fileID: 993981250290296246, guid: fc602a5f6599d1e4eb04255c35736453,
         type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 993981250290296246, guid: fc602a5f6599d1e4eb04255c35736453,
         type: 3}

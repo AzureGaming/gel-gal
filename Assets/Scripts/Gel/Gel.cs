@@ -29,14 +29,14 @@ public class Gel : MonoBehaviour {
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag(GameManager.FLOOR_TAG)) {
-            ContactPoint2D contact = collision.GetContact(0);
-            SpawnArea(contact.point.x, contact.point.y, contact.normal);
-            Instantiate(collisionParticlesPrefab, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision) {
+    //    if (collision.collider.CompareTag(GameManager.FLOOR_TAG)) {
+    //        ContactPoint2D contact = collision.GetContact(0);
+    //        SpawnArea(contact.point.x, contact.point.y, contact.normal);
+    //        Instantiate(collisionParticlesPrefab, transform.position, Quaternion.identity);
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 
     void SpawnArea(float xPos, float yPos, Vector3 normal) {
         Vector3 collisionPos = new Vector3(xPos, yPos);
@@ -49,19 +49,21 @@ public class Gel : MonoBehaviour {
         OnSpawnGelArea?.Invoke(instance, 0);
     }
 
-    //void OnCollisionEnter2D(Collision2D collision) {
-    //    Vector3 hitPosition = Vector3.zero;
-    //    if (tilemap != null && tilemapGameObject == collision.gameObject) {
-    //        foreach (ContactPoint2D hit in collision.contacts) {
-    //            hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
-    //            hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
-    //            TileBase originalTile = tilemap.GetTile(tilemap.WorldToCell(hitPosition));
-    //            Vector3Int tilePos = tilemap.WorldToCell(hitPosition);
-    //            tempTilemap.SetTile(tilePos, originalTile);
-    //            tilemap.SetTileFlags(tilePos, TileFlags.None);
-    //            tilemap.SetColor(tilePos, Color.clear);
-    //            tilemap.SetTile(tilePos, null);
-    //        }
-    //    }
-    //}
+    void OnCollisionEnter2D(Collision2D collision) {
+        Vector3 hitPosition = Vector3.zero;
+        if (tilemap != null && tilemapGameObject == collision.gameObject) {
+            Vector3Int tilePos = new Vector3Int();
+            TileBase originalTile = null;
+            foreach (ContactPoint2D hit in collision.contacts) {
+                hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
+                hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
+                originalTile = tilemap.GetTile(tilemap.WorldToCell(hitPosition));
+                tilePos = tilemap.WorldToCell(hitPosition);
+            }
+            tilemap.SetTileFlags(tilePos, TileFlags.None);
+            tilemap.SetTile(tilePos, null);
+            tempTilemap.SetTile(tilePos, originalTile);
+        }
+        Destroy(gameObject);
+    }
 }
