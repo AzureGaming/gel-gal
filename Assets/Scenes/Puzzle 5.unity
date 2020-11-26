@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 5011362499154594517, guid: 5e00b3e52d66c4f4e8093b3e6432214e,
         type: 3}
       propertyPath: m_Name
-      value: Grid (1)
+      value: Grid
       objectReference: {fileID: 0}
     - target: {fileID: 5011362499154594519, guid: 5e00b3e52d66c4f4e8093b3e6432214e,
         type: 3}
