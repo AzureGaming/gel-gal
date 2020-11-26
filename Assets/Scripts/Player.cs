@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     bool sprinting = false;
     bool canPickUp = false;
     bool hasCrate = false;
-    GameManager.GelType equippedGel;
+    [SerializeField] GameManager.GelType equippedGel;
     Vector2 direction;
     Vector3 startScale;
 
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        equippedGel = GameManager.GelType.Bounce;
+        equippedGel = GameManager.GelType.Ethereal;
     }
 
     private void OnEnable() {
