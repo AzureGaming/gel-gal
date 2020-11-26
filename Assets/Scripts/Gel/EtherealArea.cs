@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EtherealArea : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class EtherealArea : MonoBehaviour {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        BoxCollider2D collider = collision.GetComponent<BoxCollider2D>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!collider) {
+            return;
+        }
+        if (collision.CompareTag(GameManager.CRATE)) {
+            collider.enabled = false;
+        } else {
+            Player player = collision.GetComponentInParent<Player>();
+            if (player) {
+                player.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
     }
 }

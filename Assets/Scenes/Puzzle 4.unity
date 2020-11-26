@@ -123,49 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &34268909
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 34268910}
-  - component: {fileID: 34268911}
-  m_Layer: 0
-  m_Name: Room Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &34268910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34268909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4515791, y: 0.5075395, z: -6.904589}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &34268911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34268909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b6a09db4b6305d4eb9e4c5372a9f980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &64668932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +385,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -672,7 +629,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -950,7 +907,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -1160,7 +1117,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -1559,7 +1516,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -1769,7 +1726,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -1880,7 +1837,7 @@ PrefabInstance:
     - target: {fileID: 3848794814367596522, guid: e7a6f1f6c79a2814c92a5e07b955c875,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3848794814367596522, guid: e7a6f1f6c79a2814c92a5e07b955c875,
         type: 3}
@@ -1934,6 +1891,75 @@ PrefabInstance:
       objectReference: {fileID: 664182528}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a6f1f6c79a2814c92a5e07b955c875, type: 3}
+--- !u!1001 &819219130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.606792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8361293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6580553
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769763237646496304, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167070132519791751, guid: 8bc5902e8e305a34ebcbf230aab3f394,
+        type: 3}
+      propertyPath: m_Name
+      value: Singletons
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bc5902e8e305a34ebcbf230aab3f394, type: 3}
 --- !u!1001 &853777823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,7 +2010,7 @@ PrefabInstance:
     - target: {fileID: 8356089081515457981, guid: 617065f78fcf4364898b2391f00e9935,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8356089081515457981, guid: 617065f78fcf4364898b2391f00e9935,
         type: 3}
@@ -2402,7 +2428,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -2418,50 +2444,6 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
---- !u!1 &1453291255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1453291256}
-  - component: {fileID: 1453291257}
-  m_Layer: 0
-  m_Name: Level Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1453291256
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453291255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4686327, y: -2.3963828, z: -0.43109784}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1453291257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453291255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c36d4c30f1005914ba33aa931a19b45a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelIndex: 0
 --- !u!213 &1582665794
 Sprite:
   m_ObjectHideFlags: 0
@@ -2656,7 +2638,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -2866,7 +2848,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -2976,7 +2958,7 @@ PrefabInstance:
     - target: {fileID: 5156257621473480115, guid: fe686b3a345130b42ac0880c49a1e54d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5156257621473480115, guid: fe686b3a345130b42ac0880c49a1e54d,
         type: 3}
@@ -3037,7 +3019,7 @@ Transform:
   m_Children:
   - {fileID: 2034789002}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &2029272518
 LightingSettings:
@@ -3300,7 +3282,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -3510,7 +3492,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
