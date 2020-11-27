@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class RoomManager : MonoBehaviour {
+public class RoomManager : Singleton {
     public delegate void RoomCleared(bool valid);
     public static RoomCleared OnRoomCleared;
 

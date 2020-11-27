@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BounceArea : MonoBehaviour {
+public class BounceArea : GelArea {
     [SerializeField] float bounceFactor = 4000f;
     [SerializeField] float gravityApplied = 50f;
     public delegate void Bounce();

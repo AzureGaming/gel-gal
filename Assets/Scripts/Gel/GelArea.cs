@@ -1,15 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GelArea : MonoBehaviour {
-    int type;
-
-    public void Init(int gelType) {
-        type = gelType;
+    private void OnEnable() {
+        GelLimit.OnDespawnGel += Despawn;
     }
 
-    public int GetType() {
-        return type;
+    private void OnDisable() {
+        GelLimit.OnDespawnGel -= Despawn;
+    }
+
+    void Despawn(GameObject objRef) {
+        if (gameObject == objRef) {
+            OnDespawn();
+            Destroy(gameObject);
+        }
+    }
+
+    protected virtual void OnDespawn() {
+        // ...
     }
 }
