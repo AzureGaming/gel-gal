@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class GelLimit : MonoBehaviour {
+public class GelLimit : Singleton {
+    public delegate void DespawnGel(GameObject objRef);
+    public static event DespawnGel OnDespawnGel;
+
     Dictionary<int, int> LIMITS;
     Dictionary<int, List<GameObject>> limitTracker;
 
@@ -43,7 +46,8 @@ public class GelLimit : MonoBehaviour {
         if (limitTracker[type].Count > LIMITS[type]) {
             GameObject refToDelete = limitTracker[type].First();
             limitTracker[type].Remove(refToDelete);
-            Destroy(refToDelete);
+            //Destroy(refToDelete);
+            OnDespawnGel?.Invoke(refToDelete);
         }
     }
 

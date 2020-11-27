@@ -4,40 +4,21 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class EtherealGel : Gel {
-    public GameObject tilemapGameObject;
-    Tilemap tilemap;
+    public delegate void TileCollision(Collision2D collision);
+    public static event TileCollision OnTileCollision;
 
-    public GameObject tempTileMapGameObject;
-    Tilemap tempTilemap;
+    TileManager tileManager;
 
-    private void Start() {
-        tilemapGameObject = GameObject.FindGameObjectWithTag("Floor");
-        if (tilemapGameObject != null) {
-            tilemap = tilemapGameObject.GetComponent<Tilemap>();
-        }
-
-        tempTileMapGameObject = GameObject.FindGameObjectWithTag("Temp");
-        if (tempTileMapGameObject != null) {
-            tempTilemap = tempTileMapGameObject.GetComponent<Tilemap>();
-        }
+    private void Awake() {
+        tileManager = FindObjectOfType<TileManager>();
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
         Vector3 hitPosition = Vector3.zero;
-        if (tilemap != null && tilemapGameObject == collision.gameObject) {
-            Vector3Int tilePos = new Vector3Int();
-            TileBase originalTile = null;
+        if (tileManager.IsValidCollision(collision.gameObject)) {
             ContactPoint2D contact = collision.GetContact(0);
 
-            hitPosition.x = contact.point.x - 0.01f * contact.normal.x;
-            hitPosition.y = contact.point.y - 0.01f * contact.normal.y;
-            originalTile = tilemap.GetTile(tilemap.WorldToCell(hitPosition));
-            tilePos = tilemap.WorldToCell(hitPosition);
-
-            tilemap.SetTileFlags(tilePos, TileFlags.None);
-            tilemap.SetTile(tilePos, null);
-            tempTilemap.SetTile(tilePos, originalTile);
-
+            OnTileCollision?.Invoke(collision);
             SpawnArea(contact.point.x, contact.point.y, contact.normal);
         }
     }
