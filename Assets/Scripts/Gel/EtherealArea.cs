@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EtherealArea : GelArea {
+    public delegate void Remove();
+    public static Remove OnRemove;
+
     TileManager tileManager;
 
     private void Awake() {
@@ -10,6 +13,6 @@ public class EtherealArea : GelArea {
     }
 
     protected override void OnDespawn() {
-        Vector3Int pos = tileManager.GetEtherealTilePos();
+        OnRemove?.Invoke();
     }
 }

@@ -10,7 +10,13 @@ public class TileManager : MonoBehaviour {
     public GameObject tempTileMapGameObject;
     Tilemap tempTilemap;
 
-    Vector3Int etherealTilePos;
+    List<Vector3Int> etherealTilePositions;
+    List<TileBase> etherealTiles;
+
+    private void Awake() {
+        etherealTilePositions = new List<Vector3Int>();
+        etherealTiles = new List<TileBase>();
+    }
 
     private void Start() {
         tilemapGameObject = GameObject.FindGameObjectWithTag("Floor");
@@ -26,14 +32,12 @@ public class TileManager : MonoBehaviour {
 
     private void OnEnable() {
         EtherealGel.OnTileCollision += DisableTile;
+        EtherealArea.OnRemove += EnableTile;
     }
 
     private void OnDisable() {
         EtherealGel.OnTileCollision -= DisableTile;
-    }
-
-    public Vector3Int GetEtherealTilePos() {
-        return etherealTilePos;
+        EtherealArea.OnRemove -= EnableTile;
     }
 
     public bool IsValidCollision(GameObject objCollidedWith) {
@@ -43,11 +47,22 @@ public class TileManager : MonoBehaviour {
         return false;
     }
 
+    void EnableTile() {
+        TileBase tile = etherealTiles[0];
+        Vector3Int pos = etherealTilePositions[0];
+
+        tempTilemap.SetTile(pos, null);
+        tilemap.SetTile(pos, tile);
+
+        etherealTiles.Remove(tile);
+        etherealTilePositions.Remove(pos);
+    }
+
     void DisableTile(Collision2D collision) {
         ContactPoint2D contact = collision.GetContact(0);
         Vector3 hitPosition = Vector3.zero;
-        TileBase tile = null;
-        Vector3Int tilePos = new Vector3Int();
+        Vector3Int tilePos = Vector3Int.zero;
+        TileBase tile;
 
         hitPosition.x = contact.point.x - 0.01f * contact.normal.x;
         hitPosition.y = contact.point.y - 0.01f * contact.normal.y;
@@ -55,10 +70,12 @@ public class TileManager : MonoBehaviour {
         tilePos = tilemap.WorldToCell(hitPosition);
 
         tilemap.SetTileFlags(tilePos, TileFlags.None);
+        tempTilemap.SetTileFlags(tilePos, TileFlags.None);
         tilemap.SetTile(tilePos, null);
         tempTilemap.SetTile(tilePos, tile);
 
-        etherealTilePos = tilePos;
+        etherealTilePositions.Add(tilePos);
+        etherealTiles.Add(tile);
     }
 
 }
