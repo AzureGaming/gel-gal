@@ -11,7 +11,7 @@ public class BounceArea : GelArea {
     public bool hasCollided = false;
 
     private void Awake() {
-        type = GameManager.GelType.Ethereal;
+        type = GameManager.GelType.Bounce;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

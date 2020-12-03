@@ -106,7 +106,6 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void SlowAirMovement() {
-        Debug.Log("Hello");
         airMoveSpeed = 500f;
         StartCoroutine(ResetAirMovement());
     }
