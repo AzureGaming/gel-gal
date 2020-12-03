@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour {
     bool canPickUp = false;
     bool hasCrate = false;
     [SerializeField] GameManager.GelType equippedGel;
+    List<GameManager.GelType> availableGelsToEquip = new List<GameManager.GelType>();
     Vector2 direction;
     Vector3 startScale;
 
@@ -29,7 +31,9 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        equippedGel = GameManager.GelType.Ethereal;
+        availableGelsToEquip.Add(GameManager.GelType.Bounce);
+        availableGelsToEquip.Add(GameManager.GelType.Ethereal);
+        equippedGel = availableGelsToEquip[0];
     }
 
     private void OnEnable() {
@@ -54,6 +58,10 @@ public class Player : MonoBehaviour {
             }
         } else {
             OnAim?.Invoke(null);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            equippedGel = availableGelsToEquip.SkipWhile(x => x != equippedGel).Skip(1).DefaultIfEmpty(availableGelsToEquip[0]).FirstOrDefault();
         }
 
         if (Input.GetKeyDown(KeyCode.F)) {
