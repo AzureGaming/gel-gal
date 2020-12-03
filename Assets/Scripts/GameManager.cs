@@ -11,6 +11,7 @@ public class GameManager : Singleton {
     public static string CRATE = "Crate";
     public static string GOAL = "Goal";
     public static string GROUNDING = "Grounding";
+    public static string ETHEREAL_AREA = "Ethereal Gel Area";
 
     public enum GelType {
         Bounce,

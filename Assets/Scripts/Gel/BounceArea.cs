@@ -10,6 +10,10 @@ public class BounceArea : GelArea {
 
     public bool hasCollided = false;
 
+    private void Awake() {
+        type = GameManager.GelType.Ethereal;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision) {
         hasCollided = true;
         Rigidbody2D rb = collision.collider.attachedRigidbody;

@@ -11,6 +11,8 @@ TagManager:
   - Crate
   - Goal
   - Temp
+  - Gel Area
+  - Ethereal Gel Area
   layers:
   - Default
   - TransparentFX

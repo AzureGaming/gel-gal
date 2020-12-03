@@ -10,6 +10,7 @@ public class EtherealArea : GelArea {
 
     private void Awake() {
         tileManager = FindObjectOfType<TileManager>();
+        type = GameManager.GelType.Ethereal;
     }
 
     protected override void OnDespawn() {

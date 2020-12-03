@@ -13,6 +13,14 @@ public class EtherealGel : Gel {
         tileManager = FindObjectOfType<TileManager>();
     }
 
+    private void OnEnable() {
+        TileManager.OnSpawnEtherealAreaEnd += SpawnArea;
+    }
+
+    private void OnDisable() {
+        TileManager.OnSpawnEtherealAreaEnd -= SpawnArea;
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
         Vector3 hitPosition = Vector3.zero;
         if (tileManager.IsValidCollision(collision.gameObject)) {

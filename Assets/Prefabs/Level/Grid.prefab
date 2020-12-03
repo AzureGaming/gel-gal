@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5011362499154594519}
   - component: {fileID: 5011362499154594518}
+  - component: {fileID: 2978382502938339644}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -45,6 +46,22 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &2978382502938339644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5011362499154594517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec249f06adb9bb438f09307c9d9070c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  etherealGelAreaPrefab: {fileID: 5124353931718076593, guid: 6af086ce52c7879459e1a5ca82e9725c,
+    type: 3}
+  tilemapGameObject: {fileID: 0}
+  tempTileMapGameObject: {fileID: 0}
 --- !u!1001 &686728705948331245
 PrefabInstance:
   m_ObjectHideFlags: 0
