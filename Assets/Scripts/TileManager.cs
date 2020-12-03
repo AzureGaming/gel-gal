@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,10 +14,10 @@ public class TileManager : MonoBehaviour {
     public GameObject tilemapGameObject;
     Tilemap tilemap;
 
-    List<Dictionary<GameObject, Vector3>> etherealTilePositions;
+    List<GameObject[]> etherealTeleporters;
 
     private void Awake() {
-        etherealTilePositions = new List<Dictionary<GameObject, Vector3>>();
+        etherealTeleporters = new List<GameObject[]>();
     }
 
     private void Start() {
@@ -49,10 +51,15 @@ public class TileManager : MonoBehaviour {
         Vector3 tileWorldPosition = Vector3.zero;
         Quaternion newRotation = Quaternion.FromToRotation(Vector2.up, contact.normal);
         GameObject matchingAreaRef = SpawnMatchingEtherealArea(contact, newRotation, relativeVelocity);
+        UpdateEtherealTilePositions(initialAreaRef, matchingAreaRef);
+    }
 
-        etherealAreaEntry.Add(initialAreaRef, new Vector3(initialAreaRef.transform.position.x - 0.5f, initialAreaRef.transform.position.y, initialAreaRef.transform.position.z));
-        etherealAreaEntry.Add(matchingAreaRef, new Vector3(matchingAreaRef.transform.position.x + 0.5f, matchingAreaRef.transform.position.y, matchingAreaRef.transform.position.z));
-        etherealTilePositions.Add(etherealAreaEntry);
+    void UpdateEtherealTilePositions(GameObject first, GameObject second) {
+        GameObject[] newPair = new GameObject[2];
+        newPair[0] = first;
+        newPair[1] = second;
+
+        etherealTeleporters.Add(newPair);
     }
 
     GameObject SpawnMatchingEtherealArea(ContactPoint2D contact, Quaternion rotation, Vector2 velocity) {
@@ -68,7 +75,6 @@ public class TileManager : MonoBehaviour {
 
         if (Mathf.Abs(rotation.w) == 1) {
             // Place below
-            Debug.Log("Place below");
             for (; ; ) {
                 endPos.y -= 1;
                 if (tilemap.GetTile(endPos) == null) {
@@ -109,15 +115,12 @@ public class TileManager : MonoBehaviour {
     }
 
     void TeleportObjectTo(GameObject gameObj, GameObject destination) {
-        foreach (Dictionary<GameObject, Vector3> etherealAreaEntry in etherealTilePositions) {
-            if (etherealAreaEntry.ContainsKey(destination)) {
-                if (etherealAreaEntry.Count != 2) {
-                    Debug.LogWarning("Ethereal Area Entry does not have length 2.");
-                    return;
-                }
-                foreach (KeyValuePair<GameObject, Vector3> obj in etherealAreaEntry) {
-                    if (obj.Key != destination) {
-                        gameObj.transform.position = obj.Value;
+        foreach (GameObject[] teleporterPair in etherealTeleporters) {
+            bool isValidDestination = teleporterPair.Any(teleporter => teleporter == destination);
+            if (isValidDestination) {
+                foreach (GameObject teleporter in teleporterPair) {
+                    if (teleporter != destination) {
+                        gameObj.transform.position = teleporter.GetComponent<TeleportPosition>().GetPosition();
                     }
                 }
             }
