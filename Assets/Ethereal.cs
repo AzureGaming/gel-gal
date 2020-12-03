@@ -11,7 +11,7 @@ public class Ethereal : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag(GameManager.ETHEREAL_AREA)) {
             OnTeleport?.Invoke(gameObject, collision.gameObject);
-            StartCoroutine(StartTriggerCooldown());
+            //StartCoroutine(StartTriggerCooldown());
         }
     }
 

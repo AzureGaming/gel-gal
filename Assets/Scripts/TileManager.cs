@@ -120,7 +120,9 @@ public class TileManager : MonoBehaviour {
             if (isValidDestination) {
                 foreach (GameObject teleporter in teleporterPair) {
                     if (teleporter != destination) {
-                        gameObj.transform.position = teleporter.GetComponent<TeleportPosition>().GetPosition();
+                        teleporter.GetComponent<EtherealArea>().Teleport(gameObj);
+                    } else {
+                        teleporter.GetComponent<EtherealArea>().DetectExit();
                     }
                 }
             }
