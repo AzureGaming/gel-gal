@@ -44,17 +44,18 @@ public class TileManager : MonoBehaviour {
 
     void HandleEtherealGelCollision(GameObject initialAreaRef, Collision2D collision) {
         ContactPoint2D contact = collision.GetContact(0);
+        Vector2 relativeVelocity = collision.relativeVelocity;
         Dictionary<GameObject, Vector3> etherealAreaEntry = new Dictionary<GameObject, Vector3>();
         Vector3 tileWorldPosition = Vector3.zero;
-        GameObject matchingAreaRef = SpawnMatchingEtherealArea(contact);
-
+        Quaternion newRotation = Quaternion.FromToRotation(Vector2.up, contact.normal);
+        GameObject matchingAreaRef = SpawnMatchingEtherealArea(contact, newRotation, relativeVelocity);
 
         etherealAreaEntry.Add(initialAreaRef, new Vector3(initialAreaRef.transform.position.x - 0.5f, initialAreaRef.transform.position.y, initialAreaRef.transform.position.z));
         etherealAreaEntry.Add(matchingAreaRef, new Vector3(matchingAreaRef.transform.position.x + 0.5f, matchingAreaRef.transform.position.y, matchingAreaRef.transform.position.z));
         etherealTilePositions.Add(etherealAreaEntry);
     }
 
-    GameObject SpawnMatchingEtherealArea(ContactPoint2D contact) {
+    GameObject SpawnMatchingEtherealArea(ContactPoint2D contact, Quaternion rotation, Vector2 velocity) {
         Vector3 tileWorldPosition = Vector3.zero;
         Vector3Int startPos = Vector3Int.zero;
         Vector3Int endPos = Vector3Int.zero;
@@ -64,11 +65,45 @@ public class TileManager : MonoBehaviour {
         startPos = tilemap.WorldToCell(tileWorldPosition);
         endPos = startPos;
 
-        for (; ; ) {
-            endPos.x += 1;
-            if (tilemap.GetTile(endPos) == null) {
-                Quaternion newRot = Quaternion.FromToRotation(Vector2.up, contact.normal);
-                return Instantiate(etherealGelAreaPrefab, new Vector3(endPos.x, contact.point.y), newRot);
+
+        if (Mathf.Abs(rotation.w) == 1) {
+            // Place below
+            Debug.Log("Place below");
+            for (; ; ) {
+                endPos.y -= 1;
+                if (tilemap.GetTile(endPos) == null) {
+                    Vector3 newRot = rotation.eulerAngles;
+                    newRot.z += 180;
+                    return Instantiate(etherealGelAreaPrefab, new Vector3(contact.point.x, endPos.y + 1), Quaternion.Euler(newRot));
+                }
+            }
+        } else if (Mathf.Abs(rotation.x) == 1) {
+            // Place Above
+            for (; ; ) {
+                endPos.y += 1;
+                if (tilemap.GetTile(endPos) == null) {
+                    Vector3 newRot = rotation.eulerAngles;
+                    newRot.z += 180;
+                    return Instantiate(etherealGelAreaPrefab, new Vector3(contact.point.x, endPos.y), Quaternion.Euler(newRot));
+                }
+            }
+        } else {
+            if (velocity.x < 0) {
+                // Place Right
+                for (; ; ) {
+                    endPos.x += 1;
+                    if (tilemap.GetTile(endPos) == null) {
+                        return Instantiate(etherealGelAreaPrefab, new Vector3(endPos.x, contact.point.y), Quaternion.Inverse(rotation));
+                    }
+                }
+            } else {
+                // Place Left
+                for (; ; ) {
+                    endPos.x -= 1;
+                    if (tilemap.GetTile(endPos) == null) {
+                        return Instantiate(etherealGelAreaPrefab, new Vector3(endPos.x + 1, contact.point.y), Quaternion.Inverse(rotation));
+                    }
+                }
             }
         }
     }

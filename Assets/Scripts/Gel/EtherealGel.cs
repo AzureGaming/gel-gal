@@ -25,7 +25,6 @@ public class EtherealGel : Gel {
         Vector3 hitPosition = Vector3.zero;
         if (tileManager.IsValidCollision(collision.gameObject)) {
             ContactPoint2D contact = collision.GetContact(0);
-
             GameObject instance = SpawnArea(contact.point.x, contact.point.y, contact.normal);
             OnTileCollision?.Invoke(instance, collision);
         }
