@@ -48,8 +48,9 @@ public class TileManager : MonoBehaviour {
         Vector3 tileWorldPosition = Vector3.zero;
         GameObject matchingAreaRef = SpawnMatchingEtherealArea(contact);
 
-        etherealAreaEntry.Add(initialAreaRef, initialAreaRef.transform.position);
-        etherealAreaEntry.Add(matchingAreaRef, matchingAreaRef.transform.position);
+
+        etherealAreaEntry.Add(initialAreaRef, new Vector3(initialAreaRef.transform.position.x - 0.5f, initialAreaRef.transform.position.y, initialAreaRef.transform.position.z));
+        etherealAreaEntry.Add(matchingAreaRef, new Vector3(matchingAreaRef.transform.position.x + 0.5f, matchingAreaRef.transform.position.y, matchingAreaRef.transform.position.z));
         etherealTilePositions.Add(etherealAreaEntry);
     }
 
@@ -81,7 +82,7 @@ public class TileManager : MonoBehaviour {
                 }
                 foreach (KeyValuePair<GameObject, Vector3> obj in etherealAreaEntry) {
                     if (obj.Key != destination) {
-                        gameObj.transform.position = obj.Key.transform.position;
+                        gameObj.transform.position = obj.Value;
                     }
                 }
             }
