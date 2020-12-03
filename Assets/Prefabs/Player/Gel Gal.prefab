@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 9197610388020343312}
   - component: {fileID: 6774588844616876622}
   - component: {fileID: 7237183387712513410}
+  - component: {fileID: 3219670510867099923}
   m_Layer: 10
   m_Name: Gel Gal
   m_TagString: Player
@@ -313,6 +314,7 @@ MonoBehaviour:
   cratePrefab: {fileID: 3282281391862781285, guid: cbb904af11cb44d40a7f2d7022bc9ea3,
     type: 3}
   crateDropContainer: {fileID: 8008116500128761097}
+  equippedGel: 0
 --- !u!114 &2340734458560861122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +413,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74518156, y: 2.0738587}
   m_EdgeRadius: 0
+--- !u!114 &3219670510867099923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848794814367596524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a260c3b94cd2d041beec934c6c147ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider2d: {fileID: 7352929787683313919}
 --- !u!1 &6551180266830601349
 GameObject:
   m_ObjectHideFlags: 0

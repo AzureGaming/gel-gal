@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class EtherealGel : Gel {
-    public delegate void TileCollision(Collision2D collision);
+    public delegate void TileCollision(GameObject etherealAreaRef, Collision2D collision);
     public static event TileCollision OnTileCollision;
 
     TileManager tileManager;
@@ -26,8 +26,8 @@ public class EtherealGel : Gel {
         if (tileManager.IsValidCollision(collision.gameObject)) {
             ContactPoint2D contact = collision.GetContact(0);
 
-            OnTileCollision?.Invoke(collision);
-            SpawnArea(contact.point.x, contact.point.y, contact.normal);
+            GameObject instance = SpawnArea(contact.point.x, contact.point.y, contact.normal);
+            OnTileCollision?.Invoke(instance, collision);
         }
     }
 }
