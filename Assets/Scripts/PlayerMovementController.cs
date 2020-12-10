@@ -6,7 +6,6 @@ public class PlayerMovementController : MonoBehaviour {
     public delegate void EmitJump();
     public static event EmitJump OnEmitJump;
 
-    public Transform target;
     public BoxCollider2D boxCollider2d;
 
     float jumpSpeed = 1000f;
@@ -78,22 +77,6 @@ public class PlayerMovementController : MonoBehaviour {
         }
         animator.SetBool("Grounded", isGrounded);
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + raycastPadding), rayColor);
-
-        //    float rayDistance = 5f;
-        //    RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, rayDistance, groundLayerMask);
-        //    Debug.DrawLine(boxCollider.bounds.center, new Vector2(boxCollider.bounds.center.x, boxCollider.bounds.center.y - 5f), Color.red);
-        //    if (hit.collider == null) {
-        //        return;
-        //    }
-
-        //    float distance = Mathf.Abs(hit.point.y - target.position.y);
-        //    Debug.Log(distance);
-        //    if (distance < 1.05) {
-        //        grounded = true;
-        //    } else {
-        //        grounded = false;
-        //    }
-        //    animator.SetBool("Grounded", grounded);
     }
 
     void Flip() {

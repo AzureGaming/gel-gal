@@ -12,6 +12,7 @@ public class GameManager : Singleton {
     public static string ETHEREAL_AREA = "Ethereal Gel Area";
     public static string TerrainLayer = "Terrain";
     public static string SwitchLayer = "Switch";
+    public static string PlayerCrateLayer = "Player - Crate";
     public enum GelType {
         Bounce,
         Ethereal
