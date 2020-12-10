@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7320716301762878904}
   - component: {fileID: 1798913838234921140}
   - component: {fileID: 6793700405260932899}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Button Sprite
   m_TagString: Button Trigger
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 1509480683
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5060437458241130931, guid: 86f18de4e4da9e043b58015ba55783f6,
+  m_Sprite: {fileID: 7162553228475994574, guid: 1df7668f9d6d2814496038b661b9a92b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bad26bb733c514795c67f9a9f4ba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSprite: {fileID: -5060437458241130931, guid: 86f18de4e4da9e043b58015ba55783f6,
+  upSprite: {fileID: 7162553228475994574, guid: 1df7668f9d6d2814496038b661b9a92b,
     type: 3}
-  downSprite: {fileID: -8744495242704893041, guid: 86f18de4e4da9e043b58015ba55783f6,
+  downSprite: {fileID: -1707480915798231884, guid: 1df7668f9d6d2814496038b661b9a92b,
     type: 3}
   colliderSizeUp: {x: 0.7548673, y: 0.3142159}
   colliderSizeDown: {x: 0.7548674, y: 0.2346392}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7320716303477352793}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Pressure Button Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 7320716303479472699}
   - component: {fileID: 7320716303479472696}
   - component: {fileID: 7320716303479472702}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Button Collider
   m_TagString: Button Collider
   m_Icon: {fileID: 0}
