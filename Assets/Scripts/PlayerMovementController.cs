@@ -64,10 +64,11 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void IsGrounded() {
-        float raycastPadding = 0.05f;
-        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.TerrainLayer, GameManager.SwitchLayer);
+        float raycastPadding = 0.3f;
+        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.TerrainLayer, GameManager.SwitchLayer, GameManager.CratePlayerLayer);
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, raycastPadding, groundLayerMask);
         Color rayColor;
+
         if (raycastHit.collider == null) {
             rayColor = Color.red;
             isGrounded = false;
@@ -76,7 +77,7 @@ public class PlayerMovementController : MonoBehaviour {
             isGrounded = true;
         }
         animator.SetBool("Grounded", isGrounded);
-        Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + raycastPadding), rayColor);
+        Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (raycastPadding), rayColor);
     }
 
     void Flip() {
