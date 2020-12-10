@@ -66,8 +66,8 @@ public class PlayerMovementController : MonoBehaviour {
 
     void IsGrounded() {
         float raycastPadding = 0.05f;
-        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.TERRAIN);
-        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + raycastPadding, groundLayerMask);
+        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.TerrainLayer, GameManager.SwitchLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, raycastPadding, groundLayerMask);
         Color rayColor;
         if (raycastHit.collider == null) {
             rayColor = Color.red;

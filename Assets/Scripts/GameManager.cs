@@ -9,9 +9,9 @@ public class GameManager : Singleton {
     public static string BUTTON_TRIGGER = "Button Trigger";
     public static string CRATE = "Crate";
     public static string GOAL = "Goal";
-    public static string TERRAIN = "Terrain";
     public static string ETHEREAL_AREA = "Ethereal Gel Area";
-
+    public static string TerrainLayer = "Terrain";
+    public static string SwitchLayer = "Switch";
     public enum GelType {
         Bounce,
         Ethereal

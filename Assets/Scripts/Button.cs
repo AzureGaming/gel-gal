@@ -22,7 +22,7 @@ public class Button : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (IsValidTrigger(collision) && !isActivated) {
+        if (!isActivated) {
             OnButtonActivate?.Invoke(true);
             isActivated = true;
             ButtonDown();
@@ -38,14 +38,7 @@ public class Button : MonoBehaviour {
         spriteR.sprite = downSprite;
         capsuleCollider.size = colliderSizeDown;
     }
-
-    protected bool IsValidTrigger(Collider2D collision) {
-        if (collision.CompareTag(GameManager.PLAYER_TAG) || collision.CompareTag(GameManager.CRATE)) {
-            return true;
-        }
-        return false;
-    }
-
+    
     protected virtual void OnButtonActivated(bool activated) {
         OnButtonActivate?.Invoke(activated);
     }
