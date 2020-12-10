@@ -3,34 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour {
+    public delegate void EmitJump();
+    public static event EmitJump OnEmitJump;
+
     public Transform target;
+    public BoxCollider2D boxCollider2d;
 
     float jumpSpeed = 1000f;
     float moveSpeed = 2000f;
     float airMoveSpeed = 1500f;
-    bool grounded;
     bool shouldJump;
     float xMove;
     float baseAirMoveSpeed;
+    bool isGrounded;
     Vector3 startScale;
 
     Animator animator;
     Rigidbody2D rb;
     SpriteRenderer spriteR;
-    BoxCollider2D boxCollider;
 
     private void Awake() {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
         startScale = transform.localScale;
         baseAirMoveSpeed = airMoveSpeed;
     }
 
     private void Update() {
         xMove = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             shouldJump = true;
             animator.SetTrigger("Jump");
         }
@@ -63,20 +65,35 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void IsGrounded() {
-        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.GROUNDING);
-        float rayDistance = 5f;
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, rayDistance, groundLayerMask);
-        if (hit.collider == null) {
-            return;
-        }
-
-        float distance = Mathf.Abs(hit.point.y - target.position.y);
-        if (distance < 0.08) {
-            grounded = true;
+        float raycastPadding = 0.05f;
+        LayerMask groundLayerMask = LayerMask.GetMask(GameManager.TERRAIN);
+        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + raycastPadding, groundLayerMask);
+        Color rayColor;
+        if (raycastHit.collider == null) {
+            rayColor = Color.red;
+            isGrounded = false;
         } else {
-            grounded = false;
+            rayColor = Color.green;
+            isGrounded = true;
         }
-        animator.SetBool("Grounded", grounded);
+        animator.SetBool("Grounded", isGrounded);
+        Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + raycastPadding), rayColor);
+
+        //    float rayDistance = 5f;
+        //    RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, rayDistance, groundLayerMask);
+        //    Debug.DrawLine(boxCollider.bounds.center, new Vector2(boxCollider.bounds.center.x, boxCollider.bounds.center.y - 5f), Color.red);
+        //    if (hit.collider == null) {
+        //        return;
+        //    }
+
+        //    float distance = Mathf.Abs(hit.point.y - target.position.y);
+        //    Debug.Log(distance);
+        //    if (distance < 1.05) {
+        //        grounded = true;
+        //    } else {
+        //        grounded = false;
+        //    }
+        //    animator.SetBool("Grounded", grounded);
     }
 
     void Flip() {
@@ -88,15 +105,20 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void Jump() {
-        grounded = false;
         shouldJump = false;
         Vector2 force = Vector2.up * jumpSpeed;
         rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
+        animator.SetBool("Grounded", false);
+        OnEmitJump?.Invoke();
+    }
+
+    void Ground(Collision2D collision) {
+        animator.SetBool("Grounded", true);
     }
 
     void Move() {
         float xForce;
-        if (!grounded) {
+        if (!isGrounded) {
             xForce = xMove * airMoveSpeed;
         } else {
             xForce = xMove * moveSpeed;
