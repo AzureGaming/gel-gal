@@ -22,16 +22,16 @@ TagManager:
   - UI
   - 
   - 
-  - Gel Splatter
+  - Gel Area
   - Gel Projectile
   - Player
-  - Floor
-  - Player Feet
+  - Switch
+  - Player Gel Area
   - Goal
-  - Grounding
+  - Terrain
   - Crate
-  - 
-  - 
+  - Player - Crate
+  - Crate - Player
   - 
   - 
   - 

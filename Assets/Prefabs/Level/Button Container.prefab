@@ -37,6 +37,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -768557641980226517, guid: 4fc6ee3a5e391784988565aa2dcf932e,
         type: 3}
+    - target: {fileID: 7320716301762878886, guid: dd665eff51b6aa145945a6ad34a088ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7320716301762878906, guid: dd665eff51b6aa145945a6ad34a088ba,
         type: 3}
       propertyPath: m_Sprite
@@ -102,6 +107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320716303479472698, guid: dd665eff51b6aa145945a6ad34a088ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7320716301762878885, guid: dd665eff51b6aa145945a6ad34a088ba, type: 3}

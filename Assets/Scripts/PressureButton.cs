@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PressureButton : Button {
     private void OnTriggerExit2D(Collider2D collision) {
-        if (IsValidTrigger(collision) && isActivated) {
+        if (isActivated) {
             base.OnButtonActivated(false);
             isActivated = false;
             ButtonUp();
