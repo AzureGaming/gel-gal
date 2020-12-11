@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29ae7fb6e39d134e82e8bee20c7dc06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionParticlesPrefab: {fileID: 8712534377297658485, guid: 180a1d6e134c4054a905b1df8746f500,
+  collisionParticlesPrefab: {fileID: 9116045923520247786, guid: 5eb9f751afcaf004f8815f9a7a04911b,
     type: 3}
   gelAreaPrefab: {fileID: 7143749016148818989, guid: 4f89d4e808a7e454794ed0301a2ebfc9,
     type: 3}
