@@ -320,6 +320,9 @@ TextureImporter:
   - first:
       213: -586372971939285531
     second: Gel Gal-Sheet_42
+  - first:
+      213: 5953676354582188394
+    second: Gel Gal-Sheet_63
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -423,7 +426,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -444,7 +447,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -465,7 +468,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 275
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -486,7 +489,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -507,7 +510,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 200
+        y: 400
         width: 55
         height: 50
       alignment: 9
@@ -528,7 +531,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -549,7 +552,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -570,7 +573,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -591,7 +594,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -612,7 +615,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 250
+        y: 450
         width: 55
         height: 50
       alignment: 9
@@ -633,11 +636,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
+        y: 400
         width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.2929118, y: 0.50351137}
+      pivot: {x: 0.2929118, y: 0.5035114}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -654,11 +657,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 200
+        y: 400
         width: 55
         height: 50
       alignment: 9
-      pivot: {x: 0.29100177, y: 0.5163507}
+      pivot: {x: 0.2910018, y: 0.5163507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,7 +678,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -696,7 +699,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -717,7 +720,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -738,7 +741,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -759,7 +762,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 275
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -780,7 +783,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -801,7 +804,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 150
+        y: 350
         width: 55
         height: 50
       alignment: 9
@@ -822,7 +825,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -843,7 +846,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -864,7 +867,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -885,7 +888,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -906,7 +909,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -927,7 +930,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 275
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -948,7 +951,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -969,7 +972,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 100
+        y: 300
         width: 55
         height: 50
       alignment: 9
@@ -990,7 +993,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 300
+        y: 500
         width: 55
         height: 50
       alignment: 9
@@ -1011,7 +1014,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 300
+        y: 500
         width: 55
         height: 50
       alignment: 9
@@ -1032,7 +1035,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 300
+        y: 500
         width: 55
         height: 50
       alignment: 9
@@ -1053,7 +1056,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 300
+        y: 500
         width: 55
         height: 50
       alignment: 9
@@ -1074,7 +1077,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 300
+        y: 500
         width: 55
         height: 50
       alignment: 9
@@ -1095,7 +1098,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 50
+        y: 250
         width: 55
         height: 50
       alignment: 9
@@ -1116,7 +1119,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 50
+        y: 250
         width: 55
         height: 50
       alignment: 9
@@ -1137,7 +1140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 50
+        y: 250
         width: 55
         height: 50
       alignment: 9
@@ -1158,7 +1161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1179,7 +1182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 55
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1200,7 +1203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1221,7 +1224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1242,7 +1245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1263,7 +1266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 275
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1284,7 +1287,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1305,7 +1308,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 0
+        y: 200
         width: 55
         height: 50
       alignment: 9
@@ -1317,6 +1320,447 @@ TextureImporter:
       bones: []
       spriteID: 5e53ba583e8ccd7f0800000000000000
       internalID: -586372971939285531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f58f4ef6a71741f0800000000000000
+      internalID: -1060853181223827979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faa15cb272926ab0800000000000000
+      internalID: -5016286013453915405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522fcca93167c74f0800000000000000
+      internalID: -829658404769435099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369742e83ce24a440800000000000000
+      internalID: 4946129708197902691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626a1dfbf22ddf280800000000000000
+      internalID: -9007812577147640282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56921e2c954e4800800000000000000
+      internalID: 598492337577039452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2efa82b793cb2a0800000000000000
+      internalID: -6720433342817246484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 150
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e34d707c1604c70800000000000000
+      internalID: 8953263566670282375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a090dde8312d7a0800000000000000
+      internalID: -6353994619951707530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ea69180d4cb1540800000000000000
+      internalID: 4979790212794592842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e4cb11e390c1bd0800000000000000
+      internalID: -2658239517865259502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e89c7f4a683aa9c0800000000000000
+      internalID: -3915254896793970464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 50
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58da9f19c6deb490800000000000000
+      internalID: -7728503751214180259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a9b4b3266fc76b0800000000000000
+      internalID: -5297088159932507626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228b78111d4bb9850800000000000000
+      internalID: 6384895706763081762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98db23e250de81f0800000000000000
+      internalID: -1040665409458808674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5ea0131da7bab20800000000000000
+      internalID: 3146743803537974720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb657b1a67fbb9a50800000000000000
+      internalID: 6529022601043859132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e3759ca8e25fca0800000000000000
+      internalID: -5983825356273533403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa0f08e0ef4a6d10800000000000000
+      internalID: 2119594402015808171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gel Gal-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.2550162, y: 0.4015356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61938eb915bf9250800000000000000
+      internalID: 5953676354582188394
       vertices: []
       indices: 
       edges: []
