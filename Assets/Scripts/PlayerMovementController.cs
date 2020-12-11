@@ -7,6 +7,7 @@ public class PlayerMovementController : MonoBehaviour {
     public static event EmitJump OnEmitJump;
 
     public BoxCollider2D boxCollider2d;
+    public ParticleSystem dust;
 
     float jumpSpeed = 1000f;
     float moveSpeed = 2000f;
@@ -81,6 +82,7 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void Flip() {
+        dust.Play();
         if (Input.GetKeyDown(KeyCode.D)) {
             spriteR.flipX = false;
         } else if (Input.GetKeyDown(KeyCode.A)) {
