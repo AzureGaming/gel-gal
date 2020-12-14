@@ -7,7 +7,7 @@ public class PlayerMovementController : MonoBehaviour {
     public delegate void EmitJump();
     public static event EmitJump OnEmitJump;
 
-    public delegate void Teleport(GameObject obj);
+    public delegate void Teleport(GameObject self, GameObject destination);
     public static Teleport OnTeleport;
 
     public BoxCollider2D boxCollider2d;
@@ -21,6 +21,7 @@ public class PlayerMovementController : MonoBehaviour {
     float baseAirMoveSpeed;
     bool isGrounded;
     Vector3 startScale;
+    GameObject teleportDestination;
 
     Animator animator;
     Rigidbody2D rb;
@@ -73,7 +74,7 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     public void TeleportStartAnimationDone() {
-        OnTeleport?.Invoke(gameObject);
+        OnTeleport?.Invoke(gameObject, teleportDestination);
     }
 
     void IsGrounded() {
@@ -88,7 +89,7 @@ public class PlayerMovementController : MonoBehaviour {
         } else {
             rayColor = Color.green;
             isGrounded = true;
-	    dust.Play();
+            dust.Play();
         }
         animator.SetBool("Grounded", isGrounded);
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (raycastPadding), rayColor);
@@ -97,15 +98,15 @@ public class PlayerMovementController : MonoBehaviour {
     void Flip() {
         if (Input.GetKeyDown(KeyCode.D)) {
             spriteR.flipX = false;
-	    dust.Play();
+            dust.Play();
         } else if (Input.GetKeyDown(KeyCode.A)) {
             spriteR.flipX = true;
-	    dust.Play();
+            dust.Play();
         }
     }
 
     void Jump() {
-	dust.Play();
+        dust.Play();
         shouldJump = false;
         Vector2 force = Vector2.up * jumpSpeed;
         rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
@@ -133,8 +134,9 @@ public class PlayerMovementController : MonoBehaviour {
         StartCoroutine(ResetAirMovement());
     }
 
-    void StartTeleport(GameObject objRef) {
+    void StartTeleport(GameObject objRef, GameObject destination) {
         if (objRef == gameObject) {
+            teleportDestination = destination;
             animator.SetTrigger("Teleport");
             rb.isKinematic = true;
             rb.simulated = false;
@@ -145,7 +147,9 @@ public class PlayerMovementController : MonoBehaviour {
     void EndTeleport(GameObject objRef, Action cb) {
         if (objRef == gameObject) {
             animator.SetTrigger("Teleport Done");
-            cb();
+            teleportDestination = null;
+            rb.isKinematic = false;
+            rb.simulated = true;
         }
     }
 

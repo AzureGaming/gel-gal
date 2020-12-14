@@ -7,14 +7,13 @@ public class EtherealArea : GelArea {
     public delegate void Remove();
     public static Remove OnRemove;
 
-    public delegate void TeleportStart(GameObject obj);
+    public delegate void TeleportStart(GameObject objToTeleport, GameObject destination);
     public static TeleportStart OnTeleportStart;
 
     public delegate void TeleportEnd(GameObject obj, Action cb);
     public static TeleportEnd OnTeleportEnd;
 
     public BoxCollider2D collider2d;
-    public GameObject teleportPositionObj;
 
     bool exitTriggered;
     bool canTeleport = true;
@@ -23,16 +22,18 @@ public class EtherealArea : GelArea {
         type = GameManager.GelType.Ethereal;
     }
 
-    private void OnEnable() {
+    protected override void OnEnable() {
+        base.OnEnable();
         PlayerMovementController.OnTeleport += UpdatePosition;
     }
 
-    private void OnDisable() {
+    protected override void OnDisable() {
+        base.OnDisable();
         PlayerMovementController.OnTeleport -= UpdatePosition;
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        exitTriggered = true;
+        //exitTriggered = true;
     }
 
     protected override void OnDespawn() {
@@ -45,21 +46,21 @@ public class EtherealArea : GelArea {
         StartCoroutine(EnableTeleportation());
     }
 
-    public void StartTeleport(GameObject objToTeleport) {
+    public void StartTeleport(GameObject objToTeleport, GameObject destination) {
         if (canTeleport) {
-            OnTeleportStart?.Invoke(objToTeleport);
+            OnTeleportStart?.Invoke(objToTeleport, destination);
         }
     }
 
-    void UpdatePosition(GameObject obj) {
-        StartCoroutine(UpdatePositionRoutine(obj));
+    void UpdatePosition(GameObject obj, GameObject destination) {
+        StartCoroutine(UpdatePositionRoutine(obj, destination));
     }
 
-    IEnumerator UpdatePositionRoutine(GameObject objToTeleport) {
+    IEnumerator UpdatePositionRoutine(GameObject objToTeleport, GameObject destination) {
         float waitTime = 1f;
         float elapsedTime = 0f;
         Vector3 startPos = objToTeleport.transform.position;
-        Vector3 endPos = teleportPositionObj.transform.position;
+        Vector3 endPos = destination.transform.position;
 
         while (elapsedTime < waitTime) {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, (elapsedTime / waitTime));
@@ -69,7 +70,7 @@ public class EtherealArea : GelArea {
         }
 
         objToTeleport.transform.position = endPos;
-        OnTeleportEnd?.Invoke(objToTeleport, () => ResetRigidBody(objToTeleport.GetComponent<Rigidbody2D>()));
+        OnTeleportEnd?.Invoke(objToTeleport, () => ResetRigidBody());
     }
 
     IEnumerator EnableTeleportation() {
@@ -77,8 +78,6 @@ public class EtherealArea : GelArea {
         canTeleport = true;
     }
 
-    void ResetRigidBody(Rigidbody2D rb) {
-        rb.isKinematic = false;
-        rb.simulated = true;
+    void ResetRigidBody() {
     }
 }

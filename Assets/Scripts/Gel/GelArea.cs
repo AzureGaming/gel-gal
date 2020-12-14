@@ -3,21 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GelArea : MonoBehaviour {
+public abstract class GelArea : MonoBehaviour {
     public delegate void SpawnGelArea(GameObject gelAreaRef, GameManager.GelType type);
     public static event SpawnGelArea OnSpawnGelArea;
 
     protected GameManager.GelType type;
 
-    private void OnEnable() {
+    protected virtual void OnEnable() {
         GelLimit.OnDespawnGel += Despawn;
     }
 
-    private void OnDisable() {
+    protected virtual void OnDisable() {
         GelLimit.OnDespawnGel -= Despawn;
     }
 
-    private void Start() {
+    protected virtual void Start() {
         OnSpawnGelArea?.Invoke(gameObject, GetGelType());
     }
 

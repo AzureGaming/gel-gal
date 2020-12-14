@@ -114,14 +114,13 @@ public class TileManager : MonoBehaviour {
         }
     }
 
-    void TeleportObjectTo(GameObject gameObj, GameObject destination) {
+    void TeleportObjectTo(GameObject objToTeleport, GameObject startTeleporter) {
         foreach (GameObject[] teleporterPair in etherealTeleporters) {
-            bool isValidDestination = teleporterPair.Any(teleporter => teleporter == destination);
+            bool isValidDestination = teleporterPair.Any(teleporter => teleporter == startTeleporter);
             if (isValidDestination) {
                 foreach (GameObject teleporter in teleporterPair) {
-                    if (teleporter != destination) {
-                        teleporter.GetComponent<EtherealArea>().StartTeleport(gameObj);
-                    } else {
+                    if (teleporter != startTeleporter) {
+                        startTeleporter.GetComponent<EtherealArea>().StartTeleport(objToTeleport, teleporter);
                         teleporter.GetComponent<EtherealArea>().DetectExit();
                     }
                 }
