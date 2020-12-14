@@ -7,6 +7,9 @@ public class PlayerMovementController : MonoBehaviour {
     public delegate void EmitJump();
     public static event EmitJump OnEmitJump;
 
+    public delegate void Teleport(GameObject obj);
+    public static Teleport OnTeleport;
+
     public BoxCollider2D boxCollider2d;
     public ParticleSystem dust;
 
@@ -59,14 +62,18 @@ public class PlayerMovementController : MonoBehaviour {
 
     private void OnEnable() {
         BounceArea.OnBounce += SlowAirMovement;
-        EtherealArea.OnTeleport += StartTeleport;
+        EtherealArea.OnTeleportStart += StartTeleport;
         EtherealArea.OnTeleportEnd += EndTeleport;
     }
 
     private void OnDisable() {
         BounceArea.OnBounce -= SlowAirMovement;
-        EtherealArea.OnTeleport -= StartTeleport;
+        EtherealArea.OnTeleportStart -= StartTeleport;
         EtherealArea.OnTeleportEnd -= EndTeleport;
+    }
+
+    public void TeleportStartAnimationDone() {
+        OnTeleport?.Invoke(gameObject);
     }
 
     void IsGrounded() {
@@ -129,8 +136,11 @@ public class PlayerMovementController : MonoBehaviour {
     void StartTeleport(GameObject objRef) {
         if (objRef == gameObject) {
             animator.SetTrigger("Teleport");
+            rb.isKinematic = true;
+            rb.simulated = false;
         }
     }
+
 
     void EndTeleport(GameObject objRef, Action cb) {
         if (objRef == gameObject) {
