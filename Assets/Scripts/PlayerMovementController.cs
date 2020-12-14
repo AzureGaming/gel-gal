@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,10 +59,14 @@ public class PlayerMovementController : MonoBehaviour {
 
     private void OnEnable() {
         BounceArea.OnBounce += SlowAirMovement;
+        EtherealArea.OnTeleport += StartTeleport;
+        EtherealArea.OnTeleportEnd += EndTeleport;
     }
 
     private void OnDisable() {
         BounceArea.OnBounce -= SlowAirMovement;
+        EtherealArea.OnTeleport -= StartTeleport;
+        EtherealArea.OnTeleportEnd -= EndTeleport;
     }
 
     void IsGrounded() {
@@ -116,6 +121,19 @@ public class PlayerMovementController : MonoBehaviour {
     void SlowAirMovement() {
         airMoveSpeed = 500f;
         StartCoroutine(ResetAirMovement());
+    }
+
+    void StartTeleport(GameObject objRef) {
+        if (objRef == gameObject) {
+            animator.SetTrigger("Teleport");
+        }
+    }
+
+    void EndTeleport(GameObject objRef, Action cb) {
+        if (objRef == gameObject) {
+            animator.SetTrigger("Teleport Done");
+            cb();
+        }
     }
 
     IEnumerator ResetAirMovement() {
