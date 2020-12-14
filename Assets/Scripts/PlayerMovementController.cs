@@ -81,21 +81,24 @@ public class PlayerMovementController : MonoBehaviour {
         } else {
             rayColor = Color.green;
             isGrounded = true;
+	    dust.Play();
         }
         animator.SetBool("Grounded", isGrounded);
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (raycastPadding), rayColor);
     }
 
     void Flip() {
-        dust.Play();
         if (Input.GetKeyDown(KeyCode.D)) {
             spriteR.flipX = false;
+	    dust.Play();
         } else if (Input.GetKeyDown(KeyCode.A)) {
             spriteR.flipX = true;
+	    dust.Play();
         }
     }
 
     void Jump() {
+	dust.Play();
         shouldJump = false;
         Vector2 force = Vector2.up * jumpSpeed;
         rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
