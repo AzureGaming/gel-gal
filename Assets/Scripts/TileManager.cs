@@ -72,7 +72,6 @@ public class TileManager : MonoBehaviour {
         startPos = tilemap.WorldToCell(tileWorldPosition);
         endPos = startPos;
 
-
         if (Mathf.Abs(rotation.w) == 1) {
             // Place below
             for (; ; ) {

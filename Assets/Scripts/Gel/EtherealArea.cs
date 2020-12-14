@@ -13,7 +13,8 @@ public class EtherealArea : GelArea {
     public delegate void TeleportEnd(GameObject obj, Action cb);
     public static TeleportEnd OnTeleportEnd;
 
-    public BoxCollider2D collider2d;
+    public GameObject paddedPos;
+    public GameObject exitTrigger;
 
     bool exitTriggered;
     bool canTeleport = true;
@@ -25,15 +26,19 @@ public class EtherealArea : GelArea {
     protected override void OnEnable() {
         base.OnEnable();
         PlayerMovementController.OnTeleport += UpdatePosition;
+        EtherealAreaExitTrigger.OnExit += ExitTriggered;
     }
 
     protected override void OnDisable() {
         base.OnDisable();
         PlayerMovementController.OnTeleport -= UpdatePosition;
+        EtherealAreaExitTrigger.OnExit -= ExitTriggered;
     }
 
-    private void OnTriggerExit2D(Collider2D collision) {
-        //exitTriggered = true;
+    void ExitTriggered(Collider2D collision, GameObject origin) {
+        if (exitTrigger == origin) {
+            exitTriggered = true;
+        }
     }
 
     protected override void OnDespawn() {
@@ -60,7 +65,7 @@ public class EtherealArea : GelArea {
         float waitTime = 1f;
         float elapsedTime = 0f;
         Vector3 startPos = objToTeleport.transform.position;
-        Vector3 endPos = destination.transform.position;
+        Vector3 endPos = destination.GetComponent<EtherealArea>().paddedPos.transform.position;
 
         while (elapsedTime < waitTime) {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, (elapsedTime / waitTime));
@@ -79,5 +84,6 @@ public class EtherealArea : GelArea {
     }
 
     void ResetRigidBody() {
+        // no op
     }
 }
