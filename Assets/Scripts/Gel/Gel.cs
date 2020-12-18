@@ -18,8 +18,16 @@ public class Gel : MonoBehaviour {
         hitPos.x = xPos - 0.01f * normal.x;
         hitPos.y = yPos - 0.01f * normal.y;
 
-        Instantiate(collisionParticlesPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject, 0.1f);
+        SpawnCollisionParticles();
+        Despawn();
         return Instantiate(gelAreaPrefab, hitPos, newRot);
+    }
+
+    protected void SpawnCollisionParticles() {
+        Instantiate(collisionParticlesPrefab, transform.position, Quaternion.identity);
+    }
+
+    protected void Despawn() {
+        Destroy(gameObject, 0.1f);
     }
 }

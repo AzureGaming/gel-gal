@@ -27,6 +27,9 @@ public class EtherealGel : Gel {
             ContactPoint2D contact = collision.GetContact(0);
             GameObject instance = SpawnArea(contact.point.x, contact.point.y, contact.normal);
             OnTileCollision?.Invoke(instance, collision);
+        } else {
+            SpawnCollisionParticles();
+            Despawn();
         }
     }
 }
