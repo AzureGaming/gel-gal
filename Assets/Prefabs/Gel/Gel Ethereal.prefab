@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c694a1aa189244daccd63acb21ddb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionParticlesPrefab: {fileID: 8712534377297658485, guid: 180a1d6e134c4054a905b1df8746f500,
+  collisionParticlesPrefab: {fileID: 4125189518599467224, guid: 8fada264495d95e419ec45fd3b42d1ff,
     type: 3}
   gelAreaPrefab: {fileID: 5124353931718076593, guid: 6af086ce52c7879459e1a5ca82e9725c,
     type: 3}
-  tilemapGameObject: {fileID: 0}
-  tempTileMapGameObject: {fileID: 0}
 --- !u!1001 &7935464605796656765
 PrefabInstance:
   m_ObjectHideFlags: 0
