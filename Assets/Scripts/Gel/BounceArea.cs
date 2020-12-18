@@ -49,10 +49,6 @@ public class BounceArea : GelArea {
             rb.velocity = newVelocity;
             OnBounce?.Invoke();
             hasCollided = false;
-
-            //if (collision.collider.CompareTag(GameManager.PLAYER_TAG)) {
-            //    collision.collider.GetComponent<Animator>().SetTrigger("Bounce");
-            //}
         }
     }
 }
