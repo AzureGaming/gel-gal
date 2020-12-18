@@ -41,7 +41,7 @@ public class Shoot : MonoBehaviour {
         Vector3 pos = crateOrigin.transform.position;
         GameObject crateRef = Instantiate(cratePrefab, pos, transform.rotation);
         Vector3 velocity = projectileOrigin.transform.right * (lastDirection.magnitude * 2f);
-
         crateRef.GetComponent<Rigidbody2D>().velocity = velocity;
+        Debug.Log("Spawn" + crateRef.GetComponent<Rigidbody2D>().velocity);
     }
 }

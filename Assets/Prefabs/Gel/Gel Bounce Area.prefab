@@ -367,6 +367,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gel Bounce Area
       objectReference: {fileID: 0}
+    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181,
+        type: 3}
+    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4091755490470571435, guid: 83db47fb40d8d1946b12a08164e43f84,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -421,6 +442,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.3125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83db47fb40d8d1946b12a08164e43f84, type: 3}
