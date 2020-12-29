@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
     public static event Death OnDeath;
     public delegate void DropCrate();
     public static event DropCrate OnDropCrate;
+    public delegate void EquipNextGel();
+    public static event EquipNextGel OnEquipNextGel;
 
     public GameObject cratePrefab;
     public GameObject crateDropContainer;
@@ -18,6 +20,7 @@ public class Player : MonoBehaviour {
 
     bool canPickUp = false;
     bool hasCrate = false;
+    bool canEquipNext = true;
     [SerializeField] GameManager.GelType equippedGel;
     List<GameManager.GelType> availableGelsToEquip = new List<GameManager.GelType>();
     Vector3 startScale;
@@ -34,15 +37,19 @@ public class Player : MonoBehaviour {
 
     private void OnEnable() {
         CratePickUp.OnPickUp += PickUpCrate;
+        GelWheel.OnDoneRotate += EnableEquip;
     }
 
     private void OnDisable() {
         CratePickUp.OnPickUp -= PickUpCrate;
+        GelWheel.OnDoneRotate -= EnableEquip;
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Tab)) {
+        if (Input.GetKeyDown(KeyCode.Tab) && canEquipNext) {
             equippedGel = availableGelsToEquip.SkipWhile(x => x != equippedGel).Skip(1).DefaultIfEmpty(availableGelsToEquip[0]).FirstOrDefault();
+            OnEquipNextGel?.Invoke();
+            canEquipNext = false;
         }
 
         if (Input.GetKeyDown(KeyCode.F)) {
@@ -82,5 +89,9 @@ public class Player : MonoBehaviour {
     IEnumerator CratePickUpCooldown() {
         yield return new WaitForSeconds(0f);
         hasCrate = true;
+    }
+
+    void EnableEquip() {
+        canEquipNext = true;
     }
 }
