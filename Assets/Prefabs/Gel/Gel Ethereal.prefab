@@ -83,12 +83,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1554598145726837391, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7533634883983286676, guid: 90731fa43178f5a4a85ac0596ff7717f,
+        type: 3}
     - target: {fileID: 6744306983634771090, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
         type: 3}
       propertyPath: gelAreaPrefab
       value: 
       objectReference: {fileID: 5124353931718076593, guid: 6af086ce52c7879459e1a5ca82e9725c,
         type: 3}
+    - target: {fileID: 8685630899094410133, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685630899094410133, guid: 7a6443ddc26c8404b9c8b92c0369e16e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.1875
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6744306983634771090, guid: 7a6443ddc26c8404b9c8b92c0369e16e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a6443ddc26c8404b9c8b92c0369e16e, type: 3}
