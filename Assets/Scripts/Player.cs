@@ -14,7 +14,6 @@ public class Player : MonoBehaviour {
     Rigidbody2D rb;
     Animator animator;
 
-    bool sprinting = false;
     bool canPickUp = false;
     bool hasCrate = false;
     [SerializeField] GameManager.GelType equippedGel;
