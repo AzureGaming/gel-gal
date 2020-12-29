@@ -13,6 +13,7 @@ TagManager:
   - Temp
   - Gel Area
   - Ethereal Gel Area
+  - Hazard
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ public class EtherealGel : Gel {
         TileManager.OnSpawnEtherealAreaEnd -= SpawnArea;
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    protected override void OnCollisionEnter2DHook(Collision2D collision) {
         Vector3 hitPosition = Vector3.zero;
         if (tileManager.IsValidCollision(collision.gameObject)) {
             ContactPoint2D contact = collision.GetContact(0);
@@ -29,7 +29,7 @@ public class EtherealGel : Gel {
             OnTileCollision?.Invoke(instance, collision);
         } else {
             SpawnCollisionParticles();
-            Despawn();
+            Destroy(gameObject);
         }
     }
 }
