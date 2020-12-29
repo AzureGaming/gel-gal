@@ -6,10 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     public delegate void Death();
     public static event Death OnDeath;
-    public delegate void Shoot(Vector2 direction, bool hasCrate, GameManager.GelType gelType);
-    public static event Shoot OnShoot;
-    public delegate void Aim(Vector2? direction);
-    public static event Aim OnAim;
 
     public GameObject cratePrefab;
     public GameObject crateDropContainer;
@@ -23,7 +19,6 @@ public class Player : MonoBehaviour {
     bool hasCrate = false;
     [SerializeField] GameManager.GelType equippedGel;
     List<GameManager.GelType> availableGelsToEquip = new List<GameManager.GelType>();
-    Vector2 direction;
     Vector3 startScale;
 
     private void Awake() {
@@ -45,21 +40,6 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 playerPos = transform.position;
-
-        direction = mousePos - playerPos;
-
-        if (Input.GetMouseButton(1)) {
-            OnAim?.Invoke(direction);
-            if (Input.GetMouseButtonDown(0)) {
-                animator.SetTrigger("Shoot");
-                StartCoroutine(DelayShoot());
-            }
-        } else {
-            OnAim?.Invoke(null);
-        }
-
         if (Input.GetKeyDown(KeyCode.Tab)) {
             equippedGel = availableGelsToEquip.SkipWhile(x => x != equippedGel).Skip(1).DefaultIfEmpty(availableGelsToEquip[0]).FirstOrDefault();
         }
@@ -73,14 +53,20 @@ public class Player : MonoBehaviour {
         }
     }
 
-    IEnumerator DelayShoot() {
-        yield return new WaitForSeconds(0.25f);
-        OnShoot?.Invoke(direction, hasCrate, equippedGel);
-        hasCrate = false;
-    }
-
     public void CanPickup(bool value) {
         canPickUp = value;
+    }
+
+    public bool HasCrate() {
+        return hasCrate;
+    }
+
+    public void SetHasCrate(bool value) {
+        hasCrate = value;
+    }
+
+    public GameManager.GelType GetEquippedGel() {
+        return equippedGel;
     }
 
     void Die() {

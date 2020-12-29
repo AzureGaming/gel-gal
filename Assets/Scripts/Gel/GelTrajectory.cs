@@ -9,12 +9,11 @@ public class GelTrajectory : MonoBehaviour {
     public GameObject prefabContainer;
     public int numberOfPoints;
 
-    [SerializeField] float launchFactor = 2f;
-
     Rigidbody2D rb;
 
     Vector2 trajectoryDirection;
-    float launchForce;
+    float lastLaunchForce;
+    float lastGravityScale;
     bool shouldRender = false;
 
     private void Awake() {
@@ -22,11 +21,11 @@ public class GelTrajectory : MonoBehaviour {
     }
 
     private void OnEnable() {
-        Player.OnAim += SetupRender;
+        PlayerShoot.OnAim += SetupRender;
     }
 
     private void OnDisable() {
-        Player.OnAim -= SetupRender;
+        PlayerShoot.OnAim -= SetupRender;
     }
 
     private void Start() {
@@ -50,7 +49,6 @@ public class GelTrajectory : MonoBehaviour {
     }
 
     void RenderTrajectory() {
-        launchForce = trajectoryDirection.magnitude * launchFactor;
         for (int i = 0; i < points.Length; i++) {
             float time = i * 0.1f;
             points[i].transform.position = PointPosition(time);
@@ -60,7 +58,7 @@ public class GelTrajectory : MonoBehaviour {
         }
     }
 
-    void SetupRender(Vector2? direction) {
+    void SetupRender(Vector2? direction, float force, float gravityScale) {
         if (direction == null) {
             prefabContainer.SetActive(false);
             shouldRender = false;
@@ -69,10 +67,13 @@ public class GelTrajectory : MonoBehaviour {
             shouldRender = true;
             trajectoryDirection = (Vector2)direction;
         }
+        lastLaunchForce = trajectoryDirection.magnitude * force;
+        lastGravityScale = gravityScale;
     }
 
     Vector2 PointPosition(float time) {
-        Vector2 currentPosition = (Vector2)transform.position + (trajectoryDirection.normalized * launchForce * time) + 0.5f * Physics2D.gravity * (time * time);
+        Vector2 startVelocity = trajectoryDirection.normalized * lastLaunchForce;
+        Vector2 currentPosition = (Vector2)transform.position + (startVelocity * time) + (Physics2D.gravity * lastGravityScale) * time * time * 0.5f;
         return currentPosition;
     }
 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 422343921402427931}
   - component: {fileID: 1425203705058429672}
   - component: {fileID: 1914728007617734609}
-  - component: {fileID: 5070063588190972561}
   m_Layer: 8
   m_Name: Edge (1)
   m_TagString: Untagged
@@ -96,34 +95,6 @@ MonoBehaviour:
   bounceFactor: 4000
   gravityApplied: 50
   toggle: 1
---- !u!114 &5070063588190972561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4343749629472510087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6ae21cb6d492f49b6b5b7825ec5078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastVelocity: {x: 0, y: 0}
---- !u!114 &-3045930550230387312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143749016148818989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a8da124b59e174e990ebd0c8fd0fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceFactor: 4000
-  gravityApplied: 50
-  hasCollided: 0
 --- !u!1 &6811777360268734484
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +107,6 @@ GameObject:
   - component: {fileID: 7510519701168843235}
   - component: {fileID: 5512275540430395960}
   - component: {fileID: 3361325848992600778}
-  - component: {fileID: 4867900148145831799}
   m_Layer: 8
   m_Name: Edge
   m_TagString: Untagged
@@ -220,19 +190,19 @@ MonoBehaviour:
   bounceFactor: 4000
   gravityApplied: 50
   toggle: 0
---- !u!114 &4867900148145831799
+--- !u!114 &-3045930550230387312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6811777360268734484}
-  m_Enabled: 1
+  m_GameObject: {fileID: 7143749016148818989}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6ae21cb6d492f49b6b5b7825ec5078, type: 3}
+  m_Script: {fileID: 11500000, guid: 83a8da124b59e174e990ebd0c8fd0fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastVelocity: {x: 0, y: 0}
+  hasCollided: 0
 --- !u!1 &8917680261252504363
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +213,6 @@ GameObject:
   m_Component:
   - component: {fileID: 816288323710410695}
   - component: {fileID: 2705780999643264098}
-  - component: {fileID: 1192549841639296242}
   - component: {fileID: 8430642257198865774}
   m_Layer: 0
   m_Name: Velocity Capture
@@ -292,21 +261,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.559273, y: 0.64633834}
   m_EdgeRadius: 0
---- !u!114 &1192549841639296242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917680261252504363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9918eb08f18c6e34e80649b5b612bee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceFactor: 4000
-  gravityApplied: 50
-  toggle: 0
 --- !u!114 &8430642257198865774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,12 +323,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181,
-        type: 3}
-    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
-        type: 3}
       propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
@@ -388,6 +336,12 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4091755490470571434, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4623675515092536430, guid: 45eb89fa0c0e61349a9d13ae334ba181,
+        type: 3}
     - target: {fileID: 4091755490470571435, guid: 83db47fb40d8d1946b12a08164e43f84,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -451,6 +405,16 @@ PrefabInstance:
     - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502703920671376125, guid: 83db47fb40d8d1946b12a08164e43f84,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.3125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
