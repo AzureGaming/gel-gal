@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1554598145726837390}
   - component: {fileID: 1554598145726837391}
   - component: {fileID: 1554598145726837384}
-  - component: {fileID: 6744306983634771090}
   - component: {fileID: 8685630899094410133}
   m_Layer: 9
   m_Name: Base Gel
@@ -106,21 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &6744306983634771090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554598145726837385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348fe37969ca7c847849b01789e48262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionParticlesPrefab: {fileID: 8712534377297658485, guid: 180a1d6e134c4054a905b1df8746f500,
-    type: 3}
-  gelAreaPrefab: {fileID: 0}
 --- !u!61 &8685630899094410133
 BoxCollider2D:
   m_ObjectHideFlags: 0

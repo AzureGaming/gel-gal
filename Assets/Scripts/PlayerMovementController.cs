@@ -13,13 +13,25 @@ public class PlayerMovementController : MonoBehaviour {
     public BoxCollider2D boxCollider2d;
     public ParticleSystem dust;
 
-    float jumpSpeed = 1000f;
-    float moveSpeed = 2000f;
-    float airMoveSpeed = 1500f;
+    float BASE_AIR_SPEED = 1500f;
+    float BASE_MOVE_SPEED = 2000f;
+    float BASE_SPRINT_SPEED = 4000f;
+    float BASE_JUMP_SPEED = 1000f;
+    float BOUNCED_AIR_SPEED = 500f;
+    float CRATE_MOVE_SPEED = 1500f;
+    float CRATE_SPRINT_SPEED = 2000f;
+    float CRATE_JUMP_SPEED = 500f;
+    float CRATE_AIR_SPEED = 200f;
+
+    float appliedMoveSpeed;
+    float appliedAirMoveSpeed;
+    float appliedJumpSpeed;
     bool shouldJump;
     float xMove;
-    float baseAirMoveSpeed;
     bool isGrounded;
+    bool isSprinting;
+    bool isBouncing;
+    bool hasCrate;
     Vector3 startScale;
     GameObject teleportDestination;
 
@@ -27,12 +39,35 @@ public class PlayerMovementController : MonoBehaviour {
     Rigidbody2D rb;
     SpriteRenderer spriteR;
 
+    private void OnEnable() {
+        BounceArea.OnBounce += SetIsBouncing;
+        EtherealArea.OnTeleportStart += StartTeleport;
+        EtherealArea.OnTeleportEnd += EndTeleport;
+        CratePickUp.OnPickUp += HasCrate;
+        Player.OnDropCrate += DropCrate;
+        PlayerShoot.OnShootCrate += DropCrate;
+    }
+
+    private void OnDisable() {
+        BounceArea.OnBounce -= SetIsBouncing;
+        EtherealArea.OnTeleportStart -= StartTeleport;
+        EtherealArea.OnTeleportEnd -= EndTeleport;
+        CratePickUp.OnPickUp -= HasCrate;
+        Player.OnDropCrate -= DropCrate;
+        PlayerShoot.OnShootCrate -= DropCrate;
+    }
+
     private void Awake() {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
+        appliedMoveSpeed = BASE_MOVE_SPEED;
+        appliedAirMoveSpeed = BASE_AIR_SPEED;
+        appliedJumpSpeed = BASE_JUMP_SPEED;
+    }
+
+    private void Start() {
         startScale = transform.localScale;
-        baseAirMoveSpeed = airMoveSpeed;
     }
 
     private void Update() {
@@ -41,36 +76,17 @@ public class PlayerMovementController : MonoBehaviour {
             shouldJump = true;
             animator.SetTrigger("Jump");
         }
-
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            animator.SetBool("Sprinting", true);
-        } else {
-            animator.SetBool("Sprinting", false);
-        }
-
         Flip();
+        CheckSprint();
+        SetMovementSpeeds();
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("Vertical Velocity", rb.velocity.y);
     }
 
     private void FixedUpdate() {
-        if (shouldJump) {
-            Jump();
-        }
+        Jump();
         IsGrounded();
         Move();
-    }
-
-    private void OnEnable() {
-        BounceArea.OnBounce += SlowAirMovement;
-        EtherealArea.OnTeleportStart += StartTeleport;
-        EtherealArea.OnTeleportEnd += EndTeleport;
-    }
-
-    private void OnDisable() {
-        BounceArea.OnBounce -= SlowAirMovement;
-        EtherealArea.OnTeleportStart -= StartTeleport;
-        EtherealArea.OnTeleportEnd -= EndTeleport;
     }
 
     public void TeleportStartAnimationDone() {
@@ -95,6 +111,11 @@ public class PlayerMovementController : MonoBehaviour {
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (raycastPadding), rayColor);
     }
 
+    void CheckSprint() {
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
+        animator.SetBool("Sprinting", isSprinting);
+    }
+
     void Flip() {
         if (Input.GetKeyDown(KeyCode.D)) {
             spriteR.flipX = false;
@@ -106,32 +127,69 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void Jump() {
+        if (!shouldJump) {
+            return;
+        }
+
         dust.Play();
         shouldJump = false;
-        Vector2 force = Vector2.up * jumpSpeed;
+        Vector2 force = Vector2.up * appliedJumpSpeed;
         rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
         animator.SetBool("Grounded", false);
         OnEmitJump?.Invoke();
     }
 
-    void Ground(Collision2D collision) {
-        animator.SetBool("Grounded", true);
-    }
-
     void Move() {
-        float xForce;
-        if (!isGrounded) {
-            xForce = xMove * airMoveSpeed;
-        } else {
-            xForce = xMove * moveSpeed;
-        }
+        float xForce = xMove * (isGrounded ? appliedMoveSpeed : appliedAirMoveSpeed);
         Vector2 force = new Vector2(xForce * Time.deltaTime, 0);
         rb.AddForce(force);
     }
 
-    void SlowAirMovement() {
-        airMoveSpeed = 500f;
-        StartCoroutine(ResetAirMovement());
+    void HasCrate() {
+        hasCrate = true;
+    }
+
+    void DropCrate() {
+        hasCrate = false;
+    }
+
+    void SetMovementSpeeds() {
+        if (isSprinting) {
+            if (hasCrate) {
+                appliedMoveSpeed = CRATE_SPRINT_SPEED;
+            } else {
+                appliedMoveSpeed = BASE_SPRINT_SPEED;
+            }
+        } else {
+            if (hasCrate) {
+                appliedMoveSpeed = CRATE_MOVE_SPEED;
+            } else {
+                appliedMoveSpeed = BASE_MOVE_SPEED;
+            }
+        }
+
+        if (hasCrate) {
+            if (isBouncing) {
+                appliedAirMoveSpeed = BOUNCED_AIR_SPEED;
+                appliedJumpSpeed = CRATE_JUMP_SPEED;
+            } else {
+                appliedAirMoveSpeed = CRATE_AIR_SPEED;
+                appliedJumpSpeed = CRATE_JUMP_SPEED;
+            }
+        } else {
+            appliedAirMoveSpeed = BASE_AIR_SPEED;
+            appliedJumpSpeed = BASE_JUMP_SPEED;
+        }
+    }
+
+    void SetIsBouncing() {
+        isBouncing = true;
+        StartCoroutine(ResetIsBouncing());
+    }
+
+    IEnumerator ResetIsBouncing() {
+        yield return new WaitForSeconds(0.5f);
+        isBouncing = false;
     }
 
     void StartTeleport(GameObject objRef, GameObject destination) {
@@ -143,7 +201,6 @@ public class PlayerMovementController : MonoBehaviour {
         }
     }
 
-
     void EndTeleport(GameObject objRef, Action cb) {
         if (objRef == gameObject) {
             animator.SetTrigger("Teleport Done");
@@ -151,10 +208,5 @@ public class PlayerMovementController : MonoBehaviour {
             rb.isKinematic = false;
             rb.simulated = true;
         }
-    }
-
-    IEnumerator ResetAirMovement() {
-        yield return new WaitForSeconds(0.5f);
-        airMoveSpeed = baseAirMoveSpeed;
     }
 }
