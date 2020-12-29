@@ -6,6 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     public delegate void Death();
     public static event Death OnDeath;
+    public delegate void DropCrate();
+    public static event DropCrate OnDropCrate;
 
     public GameObject cratePrefab;
     public GameObject crateDropContainer;
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour {
                 GameObject crateObj = Instantiate(cratePrefab, crateDropContainer.transform.position, Quaternion.identity);
                 crateObj.GetComponent<Rigidbody2D>().velocity = rb.velocity;
                 hasCrate = false;
+                OnDropCrate?.Invoke();
             }
         }
     }

@@ -13,17 +13,25 @@ public class PlayerMovementController : MonoBehaviour {
     public BoxCollider2D boxCollider2d;
     public ParticleSystem dust;
 
-    float BASE_AIR_MOVE_SPEED = 1500f;
+    float BASE_AIR_SPEED = 1500f;
     float BASE_MOVE_SPEED = 2000f;
     float BASE_SPRINT_SPEED = 4000f;
     float BASE_JUMP_SPEED = 1000f;
-    float BOUNCED_AIR_SPEED = 500;
+    float BOUNCED_AIR_SPEED = 500f;
+    float CRATE_MOVE_SPEED = 1500f;
+    float CRATE_SPRINT_SPEED = 2000f;
+    float CRATE_JUMP_SPEED = 500f;
+    float CRATE_AIR_SPEED = 200f;
+
     float appliedMoveSpeed;
     float appliedAirMoveSpeed;
+    float appliedJumpSpeed;
     bool shouldJump;
     float xMove;
     bool isGrounded;
     bool isSprinting;
+    bool isBouncing;
+    bool hasCrate;
     Vector3 startScale;
     GameObject teleportDestination;
 
@@ -32,15 +40,19 @@ public class PlayerMovementController : MonoBehaviour {
     SpriteRenderer spriteR;
 
     private void OnEnable() {
-        BounceArea.OnBounce += ApplyBouncedAirMovement;
+        BounceArea.OnBounce += SetIsBouncing;
         EtherealArea.OnTeleportStart += StartTeleport;
         EtherealArea.OnTeleportEnd += EndTeleport;
+        CratePickUp.OnPickUp += HasCrate;
+        Player.OnDropCrate += DropCrate;
     }
 
     private void OnDisable() {
-        BounceArea.OnBounce -= ApplyBouncedAirMovement;
+        BounceArea.OnBounce -= SetIsBouncing;
         EtherealArea.OnTeleportStart -= StartTeleport;
         EtherealArea.OnTeleportEnd -= EndTeleport;
+        CratePickUp.OnPickUp -= HasCrate;
+        Player.OnDropCrate -= DropCrate;
     }
 
     private void Awake() {
@@ -48,7 +60,8 @@ public class PlayerMovementController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         appliedMoveSpeed = BASE_MOVE_SPEED;
-        appliedAirMoveSpeed = BASE_AIR_MOVE_SPEED;
+        appliedAirMoveSpeed = BASE_AIR_SPEED;
+        appliedJumpSpeed = BASE_JUMP_SPEED;
     }
 
     private void Start() {
@@ -63,6 +76,7 @@ public class PlayerMovementController : MonoBehaviour {
         }
         Flip();
         CheckSprint();
+        SetMovementSpeeds();
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("Vertical Velocity", rb.velocity.y);
     }
@@ -97,11 +111,6 @@ public class PlayerMovementController : MonoBehaviour {
 
     void CheckSprint() {
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-        if (isSprinting) {
-            appliedMoveSpeed = BASE_SPRINT_SPEED;
-        } else {
-            appliedMoveSpeed = BASE_MOVE_SPEED;
-        }
         animator.SetBool("Sprinting", isSprinting);
     }
 
@@ -116,14 +125,16 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void Jump() {
-        if (shouldJump) {
-            dust.Play();
-            shouldJump = false;
-            Vector2 force = Vector2.up * BASE_JUMP_SPEED;
-            rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
-            animator.SetBool("Grounded", false);
-            OnEmitJump?.Invoke();
+        if (!shouldJump) {
+            return;
         }
+
+        dust.Play();
+        shouldJump = false;
+        Vector2 force = Vector2.up * appliedJumpSpeed;
+        rb.AddForce(force * Time.deltaTime, ForceMode2D.Impulse);
+        animator.SetBool("Grounded", false);
+        OnEmitJump?.Invoke();
     }
 
     void Move() {
@@ -132,14 +143,51 @@ public class PlayerMovementController : MonoBehaviour {
         rb.AddForce(force);
     }
 
-    void ApplyBouncedAirMovement() {
-        appliedAirMoveSpeed = BOUNCED_AIR_SPEED;
-        StartCoroutine(ResetAirMovement());
+    void HasCrate() {
+        hasCrate = true;
     }
 
-    IEnumerator ResetAirMovement() {
+    void DropCrate() {
+        hasCrate = false;
+    }
+
+    void SetMovementSpeeds() {
+        if (isSprinting) {
+            if (hasCrate) {
+                appliedMoveSpeed = CRATE_SPRINT_SPEED;
+            } else {
+                appliedMoveSpeed = BASE_SPRINT_SPEED;
+            }
+        } else {
+            if (hasCrate) {
+                appliedMoveSpeed = CRATE_MOVE_SPEED;
+            } else {
+                appliedMoveSpeed = BASE_MOVE_SPEED;
+            }
+        }
+
+        if (hasCrate) {
+            if (isBouncing) {
+                appliedAirMoveSpeed = BOUNCED_AIR_SPEED;
+                appliedJumpSpeed = CRATE_JUMP_SPEED;
+            } else {
+                appliedAirMoveSpeed = CRATE_AIR_SPEED;
+                appliedJumpSpeed = CRATE_JUMP_SPEED;
+            }
+        } else {
+            appliedAirMoveSpeed = BASE_AIR_SPEED;
+            appliedJumpSpeed = BASE_JUMP_SPEED;
+        }
+    }
+
+    void SetIsBouncing() {
+        isBouncing = true;
+        StartCoroutine(ResetIsBouncing());
+    }
+
+    IEnumerator ResetIsBouncing() {
         yield return new WaitForSeconds(0.5f);
-        BOUNCED_AIR_SPEED = BASE_AIR_MOVE_SPEED;
+        isBouncing = false;
     }
 
     void StartTeleport(GameObject objRef, GameObject destination) {
