@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour {
     public delegate void Aim(Vector2? direction, float launchForce, float gravityScale);
     public static event Aim OnAim;
+    public delegate void ShootCrate();
+    public static event ShootCrate OnShootCrate;
 
     public GameObject bounceGelPrefab;
     public GameObject etherealGelPrefab;
@@ -55,6 +57,7 @@ public class PlayerShoot : MonoBehaviour {
         lastDirection = direction;
         if (hasCrate) {
             SpawnCrateProjectile();
+            OnShootCrate?.Invoke();
         } else if (gelType == GameManager.GelType.Bounce) {
             SpawnGelProjectile(bounceGelPrefab);
         } else if (gelType == GameManager.GelType.Ethereal) {

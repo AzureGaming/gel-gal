@@ -45,6 +45,7 @@ public class PlayerMovementController : MonoBehaviour {
         EtherealArea.OnTeleportEnd += EndTeleport;
         CratePickUp.OnPickUp += HasCrate;
         Player.OnDropCrate += DropCrate;
+        PlayerShoot.OnShootCrate += DropCrate;
     }
 
     private void OnDisable() {
@@ -53,6 +54,7 @@ public class PlayerMovementController : MonoBehaviour {
         EtherealArea.OnTeleportEnd -= EndTeleport;
         CratePickUp.OnPickUp -= HasCrate;
         Player.OnDropCrate -= DropCrate;
+        PlayerShoot.OnShootCrate -= DropCrate;
     }
 
     private void Awake() {
